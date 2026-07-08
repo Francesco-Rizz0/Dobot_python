@@ -84,7 +84,7 @@ Questo documento raccoglie, descrive e analizza dettagliatamente tutte le funzio
 * **Note del programmatore**: Il metodo non accetta parametri di coordinate opzionali sovrascritti nell'implementazione standard per evitare conflitti con la memoria del firmware. Riporta il braccio alle coordinate spaziali predefinite impresse nella ROM della scheda logica.
 
 ### `set_ptpcommon_params(self, port_name, velocity_ratio, acceleration_ratio)`
-* **Descrizione**: Configura la velocità ed accelerazione applicate alle traiettorie punto-punto (PTP) utilizzate per gli spostamenti lineari e della rotaia.
+* **Descrizione**: Configura la velocità ed accelerazione applicate alle trajectories punto-punto (PTP) utilizzate per gli spostamenti lineari e della rotaia.
 * **Parametri**: Identici a `set_jogcommon_params` (valori percentuali da `1` a `100`).
 
 ### `set_device_withl(self, port_name, enable)`
@@ -124,8 +124,36 @@ Questo documento raccoglie, descrive e analizza dettagliatamente tutte le funzio
     * `True`: Genera la depressione (aspirazione/vuoto), permettendo alla ventosa di afferrare e trattenere saldamente un oggetto.
     * `False`: Interrompe l'aspirazione e inverte brevemente il flusso d'aria (soffiaggio di rilascio) per staccare istantaneamente l'oggetto manipolato.
   * `is_queued` (bool): Impostato su `False` per attivare/disattivare la ventosa in tempo reale.
-## Implementazione delle funzioni
+
+---
+
+## 👁️ 6. Controllo Sensori di Rilevamento (Sensore Infrarossi)
+
+### `set_infrared_sensor(self, port_name, port, enable, version, is_queued)`
+* **Descrizione**: Configura, alimenta e abilita l'interfaccia hardware del sensore di presenza fotoelettrico a infrarossi collegato alle porte GPIZ/GP_In del Dobot.
+* **Parametri**:
+  * `port_name` (str): La porta COM attiva.
+  * `port` (int): L'identificativo numerico del pin o della porta di comunicazione fisica sulla scheda del robot (di norma viene impiegata la porta `2`).
+  * `enable` (bool): `True` per attivare e alimentare elettricamente il sensore, `False` per disattivarlo.
+  * `version` (int): Definisce la versione firmware/protocollo hardware del sensore accoppiato (valore predefinito: `1`).
+  * `is_queued` (bool): Impostato su `False` per applicare istantaneamente la configurazione hardware senza passare dalla coda FIFO dei comandi di movimento.
+
+### `get_infrared_sensor(self, port_name, port, is_queued)`
+* **Descrizione**: Interroga lo stato logico di commutazione del sensore a infrarossi per rilevare il passaggio o la presenza di un oggetto sul nastro trasportatore.
+* **Parametri**:
+  * `port_name` (str): La porta COM attiva.
+  * `port` (int): La porta fisica corrispondente a quella configurata in fase di setup (`port=2`).
+  * `is_queued` (bool): Impostato tassativamente su `False` per ottenere una lettura immediata e sincrona (polling real-time) dello stato del sensore.
+* **Valore di ritorno**: Restituisce un dizionario contenente i dati di lettura del registro logico. La chiave fondamentale è:
+  * `'status'` (int): Ritorna lo stato digitale del raggio infrarosso:
+    * `1`: Un oggetto ha interrotto il fascio luminoso (rilevamento barriera occupata / ostacolo presente).
+    * `0`: Nessun ostacolo intercettato (barriera libera).
+
+---
+
+## 🛠️ Implementazione delle funzioni
 * Per implementare le funzioni dovrai chiamare due oggetti:
   * `dobotEdu.magician`: per interagire con il Dobot Magician.
   * `dobotEdu.m_lite`: per interagire con il Dobot Magician Lite.
-* Per usare le funzioni, chiamare uno dei due oggetti e aggiungere alla fine dell'oggetto la funzione che si vuole usare preceduta da un punto. Ad esempio, per connettere un Dobot Magician si fà in questo modo: `dobotEdu.magician.connect(port)`. Questo codice connetterà al programma un Dobot Magician collegato alla porta COM `port`. Per ulteriori esempi, controllare i file contenuti nella cartella code.
+* Per usare le funzioni, chiamare uno dei due oggetti e aggiungere alla fine dell'oggetto la funzione che si vuole usare preceduta da un punto. Ad esempio, per connettere un Dobot Magician:
+  `dobotEdu.magician.connect_dobot(port_name=port_name)`. Questo codice connetterà al programma un Dobot Magician collegato alla porta COM `port`. Per ulteriori esempi, controllare i file contenuti nella cartella code.
