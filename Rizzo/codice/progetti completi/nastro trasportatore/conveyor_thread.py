@@ -1,3 +1,4 @@
+#NON FUNZIONANATE!!!
 import tkinter as tk
 from tkinter import ttk, messagebox
 from DobotEDU import *
