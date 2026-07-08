@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translation revision="1" language="Suomi" languageInSuomi="Suomi" author="Repetier">
+<t id="M_FILE" ver="1">Tiedosto</t>
+<t id="M_CONFIG" ver="1">Rakenne</t>
+<t id="M_SLICER" ver="1">Slicer</t>
+<t id="M_TEMPERATURE" ver="1">Lämpötila</t>
+<t id="M_PRINTER" ver="1">Tulostin</t>
+<t id="M_HELP" ver="1">Apua</t>
+<t id="M_LOAD_GCODE" ver="1">Lataa G-Koodi</t>
+<t id="M_SHOW_WORKDIRECTORY" ver="1">Näytä Työhakemisto</t>
+<t id="M_LANGUAGE" ver="1">Kieli</t>
+<t id="M_PRINTER_SETTINGS" ver="1">Tulostin asetukset</t>
+<t id="M_EEPROM_SETTINGS" ver="1">Laiteohjaimen EEPROM Asetukset</t>
+<t id="M_3D_VIEWER_CONFIGURATION" ver="1">3D Näkymä Asetukset</t>
+<t id="M_REPETIER_SETTINGS" ver="1">Repetier:n Yleiset Asetukset</t>
+<t id="M_TESTCASE_SETTINGS" ver="1">Kokeilu Tapauksen Slicing Arvot</t>
+<t id="M_SOUND_CONFIGURATION" ver="1">Äänen astukset</t>
+<t id="M_SHOW_EXTRUDER_TEMPERATURES" ver="1">Näytä Suuttimen lämpötilat</t>
+<t id="M_SHOW_HEATED_BED_TEMPERATURES" ver="1">Näytä Lämmitetyn pöydän lämpötilat</t>
+<t id="M_SHOW_TARGET_TEMPERATURES" ver="1">Näytä Tavoite Lämpötilat</t>
+<t id="M_SHOW_AVERAGE_TEMPERATURES" ver="1">Näytä Keskiarvolämpötilat</t>
+<t id="M_SHOW_HEATER_POWER" ver="1">Näytä Lämmittimen Virta</t>
+<t id="M_AUTOSCROLL_TEMPERATURE_VIEW" ver="1">Automaattinen vieritys Lämpötila Näkymä</t>
+<t id="M_TIMEPERIOD" ver="1">Aikajakso</t>
+<t id="M_TEMPERATURE_ZOOM" ver="1">Zoom</t>
+<t id="M_BUILD_AVERAGE_OVER" ver="1">Build Average over ...</t>
+<t id="M_30_SECONDS" ver="1">30 Sekuntia</t>
+<t id="M_1_MINUTE" ver="1">1 Minuutti</t>
+<t id="M_2_MINUTES" ver="1">2 Minuuttia</t>
+<t id="M_5_MINUTES" ver="1">5 Minuuttia</t>
+<t id="M_10_MINUTES" ver="1">10 Minuuttia</t>
+<t id="M_15_MINUTES" ver="1">15 Minuuttia</t>
+<t id="M_30_MINUTES" ver="1">30 Minuuttia</t>
+<t id="M_60_MINUTES" ver="1">60 Minuuttia</t>
+<t id="M_CONTINUOUS_MONITORING" ver="1">Jatkuva Seuranta</t>
+<t id="M_DISABLE" ver="1">Kytke pois päältä</t>
+<t id="M_EXTRUDER_1" ver="1">Suutin 1</t>
+<t id="M_EXTRUDER_2" ver="1">Suutin 2</t>
+<t id="M_HEATED_BED" ver="1">Lämmitetty Alusta</t>
+<t id="M_PRINTER_INFORMATION" ver="1">Tulostin Tiedot</t>
+<t id="M_JOB_STATUS" ver="1">Työn Tila</t>
+<t id="M_SD_CARD_MANAGER" ver="1">SD-Kortin Hallinta</t>
+<t id="L_SD_CARD_MANAGEMENT" ver="1">SD-Kortin Hallinto</t>
+<t id="M_TEST_CASE_GENERATOR" ver="1">Kokeilutapauksen Generaattori</t>
+<t id="M_SEND_SCRIPT_1" ver="1">Lähetä Scripti 1</t>
+<t id="M_SEND_SCRIPT_2" ver="1">Lähetä Scripti 2</t>
+<t id="M_SEND_SCRIPT_3" ver="1">Lähetä Scripti 3</t>
+<t id="M_SEND_SCRIPT_4" ver="1">Lähetä Scripti 4</t>
+<t id="M_SEND_SCRIPT_5" ver="1">Lähetä Scripti 5</t>
+<t id="M_REPETIER_HOST_HOMEPAGE" ver="1">Repetier-Host Kotisivu</t>
+<t id="M_REPETIER_HOST_DOWNLOAD_PAGE" ver="1">Repetier-Host Lataus</t>
+<t id="M_MANUAL" ver="1">Repetier-Host Ohjeet</t>
+<t id="M_SLIC3R_HOMEPAGE" ver="1">Slic3r Kotisivu</t>
+<t id="M_SKEINFORGE_HOMEPAGE" ver="1">Skeinforge Kotisivu</t>
+<t id="M_REPRAP_WEBSITE" ver="1">RepRap Kotisivu</t>
+<t id="M_REPRAP_FORUM" ver="1">RepRap Foorumi</t>
+<t id="M_THINGIVERSE_NEWEST" ver="1">Thingiversen Uusimmat Asiat</t>
+<t id="M_THINGIVERSE_POPULAR" ver="1">Thingiversen Suositut Asiat</t>
+<t id="M_ABOUT_REPETIER_HOST" ver="1">Jotakin Repetier-Host:sta</t>
+<t id="M_CHECK_FOR_UPDATES" ver="1">Tarkista Päivitykset</t>
+<t id="L_DISCONNECT_PRINTER" ver="1">Irroita Printer</t>
+<t id="L_CONNECT_PRINTER" ver="1">Liitä Tulostin</t>
+<t id="M_DISCONNECT" ver="1">Katkaise</t>
+<t id="M_CONNECT" ver="1">Yhdistä</t>
+<t id="M_QUIT" ver="1">Lopeta</t>
+<t id="TAB_3D_VIEW" ver="1">3D Näkymä</t>
+<t id="TAB_TEMPERATURE_CURVE" ver="1">Lämpötilan käyrä</t>
+<t id="TAB_OBJECT_PLACEMENT" ver="1">Kohteen Sijoitus</t>
+<t id="TAB_SLICER" ver="1">Slicer</t>
+<t id="TAB_GCODE_EDITOR" ver="1">G-Koodin Muokkaus</t>
+<t id="TAB_MANUAL_CONTROL" ver="1">Käsiohjaus</t>
+<t id="M_EMERGENCY_STOP" ver="1">Hätäpysäytys</t>
+<t id="M_LOAD" ver="1">Lataa</t>
+<t id="M_SAVE_JOB" ver="1">Tallenna työ</t>
+<t id="M_RUN_JOB" ver="1">Aja työ</t>
+<t id="M_PAUSE_JOB" ver="1">Tauko työssä</t>
+<t id="M_KILL_JOB" ver="1">Lopeta työ</t>
+<t id="M_SD_CARD" ver="1">SD Kortti</t>
+<t id="M_TOGGLE_LOG" ver="1">Toggle Log</t>
+<t id="M_SHOW_FILAMENT" ver="1">Näytä Lanka</t>
+<t id="M_HIDE_FILAMENT" ver="1">Piilota Lanka</t>
+<t id="L_FILAMENT_VISUALIZATION_DISABLED" ver="1">Langan näyttäminen estetty</t>
+<t id="L_FILAMENT_VISUALIZATION_ENABLED" ver="1">Langan näyttäminen sallittu</t>
+<t id="L_LOAD_FILE" ver="1">Lataa tiedosto</t>
+<t id="L_IMPORT_G_CODE" ver="1">Tuo G-Koodi</t>
+<t id="L_SAVE_G_CODE" ver="1">Tallenna G-Koodi</t>
+<t id="L_ERROR" ver="1">Virhe</t>
+<t id="L_PAUSE_MSG" ver="1">Paina OK jatkaaksesi.
+Voit lisätä taukoja koodiisi tällä
+@Tauko Jotain Tämän Näköistä Tekstiä</t>
+<t id="L_DISCONNECTED" ver="1">Irroitettu</t>
+<t id="L_UPDATING..." ver="1">Päivittämässä ...</t>
+<t id="L_SLICE_WITH" ver="1">Viipaloi $1</t>
+<t id="L_EMERGENCY_STOP_MSG" ver="1">Lähetä hätäpysäytys tulostimelle. Voit tarvita uudelleenkäynnistyksen tulostimen resetointiin!</t>
+<t id="L_TRANSLATION:" ver="1">Käännös</t>
+<t id="L_SCALE:" ver="1">Skaalaus</t>
+<t id="L_ROTATE:" ver="1">Pyöritys</t>
+<t id="L_STL_OBJECTS" ver="9">Kohteet</t>
+<t id="B_SAVE_AS_STL" ver="9">Vienti</t>
+<t id="B_REMOVE_STL_OBJECT" ver="1">Kohteen Poisto</t>
+<t id="B_ADD_STL_OBJECT" ver="1">Lisää Kohde</t>
+<t id="B_AUTOPOSITION" ver="1">Automaattinen asetus</t>
+<t id="B_DROP_OBJECT" ver="1">Pudota Kohde</t>
+<t id="B_COPY_OBJECTS" ver="1">Kopioi Kohteita</t>
+<t id="B_CENTER_OBJECT" ver="1">Keskitä Kohde</t>
+<t id="L_LOCK_ASPECT_RATIO" ver="1">Lukitse Kuvasuhde</t>
+<t id="B_KILL_SLICING_PROCESS" ver="1">Lopeta Slicing</t>
+<t id="B_SETUP_SKEINFORGE" ver="1">Asetus</t>
+<t id="B_SETUP_SLIC3R" ver="1">Asetus</t>
+<t id="B_CONFIGURE_SKEINFORGE" ver="1">Asetukset</t>
+<t id="B_CONFIGURE_SLIC3R" ver="1">Asetukset</t>
+<t id="B_ACTIVE" ver="1">Aktiivinen</t>
+<t id="L_FILAMENT_SETTINGS" ver="1">Langan Asetukset:</t>
+<t id="L_PRINTER_SETTINGS" ver="1">Tulostimen Asetukset:</t>
+<t id="L_PRINT_SETTINGS" ver="1">Tulostus Asetukset:</t>
+<t id="L_PROFILE" ver="1">Profiili:</t>
+<t id="B_SEND" ver="1">Lähetä</t>
+<t id="B_SIMULATE_OK" ver="1">OK</t>
+<t id="B_STOP_MOTOR" ver="1">Sammuta Moottori</t>
+<t id="B_PARK" ver="1">Pysäköi</t>
+<t id="B_RETRACT" ver="1">Peru</t>
+<t id="B_EXTRUDE" ver="1">Tulosta</t>
+<t id="L_OUTPUT_PERCENT" ver="1">Tulosta $1%</t>
+<t id="B_POWER" ver="1">Virta</t>
+<t id="B_HEAT_EXTRUDER" ver="1">Suuttimen Lämpö</t>
+<t id="B_HEAT_PRINTBED" ver="1">Tulostusalustan Lämpö</t>
+<t id="B_FAN" ver="1">Puhallin</t>
+<t id="B_DEBUG_ERRORS" ver="1">Virheet</t>
+<t id="B_DEBUG_ECHO" ver="1">Kaiku</t>
+<t id="B_DRY_RUN" ver="1">Harjoitus</t>
+<t id="B_DEBUG_INFO" ver="1">Tiedot</t>
+<t id="L_EXTRUDER" ver="1">Suutin</t>
+<t id="L_PRINTBED" ver="1">Tulostusalusta</t>
+<t id="L_SPEED_MULTIPLY" ver="1">Nopeuden Lisäys</t>
+<t id="L_EXTRUDE_MM" ver="1">Pursotus [mm]</t>
+<t id="L_EXTRUDER_SPEED_MM_MIN" ver="1">Nopeus [mm/min]</t>
+<t id="L_RETRACT_MM" ver="1">Peruuta [mm]</t>
+<t id="L_TEMP" ver="1">Lämpötila</t>
+<t id="L_CONNECTED" ver="1">Yhdistetty</t>
+<t id="L_HEATING_BED" ver="1">Tulostusalustan lämmitys</t>
+<t id="L_HEATING_EXTRUDER" ver="1">Suuttimen Lämmitys</t>
+<t id="L_PRINT_JOB_KILLED" ver="1">Tulostustyö Lopetettu</t>
+<t id="L_PRINT_JOB_PAUSED" ver="1">Tulostustyö Pysäytetty</t>
+<t id="L_PRINT_JOB_FINISHED" ver="1">Tulostustyö Päättynyt</t>
+<t id="L_UPLOADING..." ver="1">Lähetys ... $1%</t>
+<t id="L_PRINTING_JOB_ETA" ver="1">Tulostustyö ETA $1</t>
+<t id="L_IDLE" ver="1">Tyhjäkäynti</t>
+<t id="L_X_COMMANDS_WAITING" ver="1">$1 Odotetaan Komentoa</t>
+<t id="L_EXTRUDER:" ver="1">Suutin:</t>
+<t id="L_BED:" ver="1">Tulostusalusta:</t>
+<t id="L_OFF" ver="1">Pois Päältä</t>
+<t id="L_NOT_A_NUMBER" ver="1">Ei Numeroa</t>
+<t id="L_POSITIVE_NUMBER_REQUIRED" ver="1">Positiivinen Numero Vaadittu</t>
+<t id="L_NOT_AN_INTEGER" ver="1">Ei Ole Kokonaisluku</t>
+<t id="L_RESET_OUTPUT" ver="1">Nollaa Alkutilaan. Pienen odottelun jälkeen, minulla on vain $1</t>
+<t id="L_RECEIVING_ONLY_ERRORS" ver="1">Virheilmoituksia vain vastaanotetaan. Yhteydenpito Pysäytetty.</t>
+<t id="L_PRINTING..ETA" ver="1">Tulostamassa...ETA $1</t>
+<t id="L_LAYER_X/Y" ver="1"> Taso $1/$2</t>
+<t id="L_ERROR_SENDING_DATA:" ver="1">Lähettämässä Virhe Tietoa:</t>
+<t id="L_CONNECTION_ERROR" ver="1">Yhdistämisvirhe</t>
+<t id="L_SERIAL_COM_ERROR" ver="1">Sarjaportti Virhe:</t>
+<t id="L_SHOW_IN_LOG" ver="1">Näytä lokitiedsotossa:</t>
+<t id="B_ACK" ver="1">ACK</t>
+<t id="B_AUTO_SCROLL" ver="1">Automaattinen Vieritys</t>
+<t id="B_COMMANDS" ver="1">Komennot</t>
+<t id="B_LOG_ERRORS" ver="1">Virheet</t>
+<t id="B_LOG_INFO" ver="1">Tiedot</t>
+<t id="B_LOG_WARNINGS" ver="1">Varoitukset</t>
+<t id="B_COPY" ver="1">Kopioi</t>
+<t id="B_CLEAR_LOG" ver="1">Tyhjennä Lokitiedosto</t>
+<t id="L_COPY" ver="1">Kopioi</t>
+<t id="L_CUT" ver="1">Leikkaa</t>
+<t id="L_NEW_TEXT" ver="1">Uusi Teksti</t>
+<t id="L_SAVE" ver="1">Tallenna</t>
+<t id="L_PASTE" ver="1">Liitä</t>
+<t id="L_UNDO" ver="1">Peruuta komento</t>
+<t id="L_REDO" ver="1">Tee Uudelleen</t>
+<t id="L_AUTO_UPDATE_PREVIEW" ver="1">Automaattinen Päivityksen näyttö</t>
+<t id="L_START_CODE" ver="1">Koodin Alku</t>
+<t id="L_END_CODE" ver="1">Koodin Loppu</t>
+<t id="L_RUN_ON_KILL" ver="1">Aja Lopetuksessa</t>
+<t id="L_RUN_ON_PAUSE" ver="1">Aja Tauolla</t>
+<t id="L_SCRIPT_X" ver="1">Skripti $1</t>
+<t id="L_LAYER_X" ver="1">Taso $1</t>
+<t id="L_EXTRUDER_X" ver="1">Suutin $1</t>
+<t id="L_EDITOR_C" ver="1">C$1</t>
+<t id="L_EDITOR_R" ver="1">R$1</t>
+<t id="L_OVERWRITE" ver="1">Ylikirjoita</t>
+<t id="L_INSERT" ver="1">Lisää</t>
+<t id="L_SYNTAX" ver="1">Lauseoppi</t>
+<t id="TAB_HELP" ver="1">Apua</t>
+<t id="TAB_VISUALIZATION" ver="1">Visualisointi</t>
+<t id="L_SHOW_COMPLETE_CODE" ver="1">Näytä Koko Koodi</t>
+<t id="L_SHOW_LAYER_RANGE" ver="1">Näytä Tason Alueet</t>
+<t id="L_SHOW_SINGLE_LAYER" ver="1">Näytä Yksittäinen Taso</t>
+<t id="L_FIRST_LAYER" ver="1">Ensimmäinen Taso:</t>
+<t id="L_LAST_LAYER" ver="1">Viimeinen Taso:</t>
+<t id="L_REALLY_DELETE_PRINTER" ver="1">Haluatko tosiaan poistaa kaikki asetukset $1?</t>
+<t id="L_SECURITY_QUESTION" ver="1">Turvallisuus Kysymys</t>
+<t id="L_ADD_PRINTING_TIME" ver="1">Add to comp. Tulostus Aika</t>
+<t id="L_BAUD_RATE" ver="1">Baudi Nopeus:</t>
+<t id="L_CACHE_SIZE_HINT" ver="1">Arduino 1:n vastaanottimen välimuisti alennettu 127:stä 63:een bittiin!</t>
+<t id="L_CHECK_EVERY_X" ver="1">Tarkista joka $1 sekunti.</t>
+<t id="L_CONNECTION_INFO" ver="1">Tulostimen asetukset vastaavat aina valitun tulostimen huippuun. Ne
+ovat tallennettu jokaisella hyväksynnällä (OK) tai käytöllä. Luodaksesi uuden tulostimen, anna vain uusi
+tulostimen nimi ja paina "käytä". Uusi tulostin aloittaa aikaisemman valituilla asetuksilla.</t>
+<t id="L_DEFAULT_EXTRUDER_TEMPERATURE" ver="1">Oletussuuttimen Lämpötila:</t>
+<t id="L_DEFAULT_HEATED_BED_TEMPERATURE" ver="1">Oletustulostusalustan Lämpötila:</t>
+<t id="L_DUMP_AREA_DEPTH" ver="1">Jätealueen syvyys:</t>
+<t id="L_DUMP_AREA_FRONT" ver="1">Jätealueen etuosa:</t>
+<t id="L_DUMP_AREA_LEFT" ver="1">Jätealueen vasenosa:</t>
+<t id="L_DUMP_AREA_WIDTH" ver="1">Jätealueen leveys:</t>
+<t id="L_FILTER_INFO" ver="1">Voit ajaa erotusohjelman jokaisen kerrostustoiminnan jälkeen. Erotus ajaa slicer:n tekemän G-koodin.
+  Käytä #in ja #out lisätäksesi ja tulostaaksesi tiedostonimiä arvoina.</t>
+<t id="L_FILTER_PATH_PARAM" ver="1">Suodatin Polku ja Arvo:</t>
+<t id="L_PARITY" ver="1">Yhdenvertainen:</t>
+<t id="L_PARK_POSITION" ver="1">Pysäköinti Asema:</t>
+<t id="L_PORT" ver="1">Portti:</t>
+<t id="L_PRINT_AREA_DEPTH" ver="1">Tulostusalueen Syvyys:</t>
+<t id="L_PRINT_AREA_HEIGHT" ver="1">Tulostusalueen Korkeus:</t>
+<t id="L_PRINT_AREA_WIDTH" ver="1">Tulostusalueen Leveys:</t>
+<t id="L_PRINTER" ver="1">Tulostin:</t>
+<t id="L_RECEIVE_CACHE_SIZE" ver="1">Välimuistin Vastaanoton Koko:</t>
+<t id="L_STOPBITS" ver="1">Pysäytys Bitti:</t>
+<t id="L_TRANSFER_PROTOCOL" ver="1">Siirron Toimintaohje:</t>
+<t id="L_TRAVEL_FEED_RATE" ver="1">Siirron Syöttöarvo:</t>
+<t id="L_ZFEED_RATE" ver="1">Z-Akselin Liikenopeus:</t>
+<t id="L_DISABLE_EXTRUDER_AFTER_JOB" ver="1">Estä Pursotus Työ/Lopetuksen jälkeen</t>
+<t id="L_DISABLE_MOTORS" ver="1">Estä Moottorien Toiminta Työ/Lopetuksen jälkeen</t>
+<t id="L_DISABLE_HEATED_BED_AFTER_JOB" ver="1">Estä Tulostuspöydän Toiminta Työ/Lopetuksen jälkeen</t>
+<t id="L_GO_PARK_POSITION" ver="1">Mene Kotiasemaan Työ/Lopetuksen jälkeen</t>
+<t id="L_HAS_DUMP_AREA" ver="1">On Jätealueella</t>
+<t id="L_HOME_X_MAX" ver="1">Koti on X Max</t>
+<t id="L_HOME_Y_MAX" ver="1">Koti on Y Max</t>
+<t id="L_HOME_Z_MAX" ver="1">Koti ont Z Max</t>
+<t id="L_PING_PONG_MODE" ver="1">Use Ping-Pong Communication (Send only after ok)</t>
+<t id="L_RUN_FILTER_EVERY_SLICE" ver="1">Aja Erotus jokaisen Tason jälkeen</t>
+<t id="L_CHECK_EXTRUDER_BED_TEMPERATURE" ver="1">Tarkista Suutin &amp;&amp; Tulostusalustan Lämpötila</t>
+<t id="L_REMOVE_M105_REQUEST_LOG" ver="1">Poista lämpötila vaatimukset lokitiedosta</t>
+<t id="B_CANCEL" ver="1">Peruuta</t>
+<t id="B_APPLY" ver="1">Käytä</t>
+<t id="B_OK" ver="1">HYVÄKSY</t>
+<t id="B_DELETE_PRINTER_SETTINGS" ver="1">Poista Tämä Tulostimen Asetus</t>
+<t id="TAB_CONNECTION" ver="1">Yhteys</t>
+<t id="TAB_PRINTER" ver="1">Tulostin</t>
+<t id="TAB_PRINTER_SHAPE" ver="1">Tulostimen Muoto</t>
+<t id="TAB_ADVANCED" ver="1">Edistynyt</t>
+<t id="W_PRINTER_SETTINGS" ver="1">Tulostimen Asetukset</t>
+<t id="L_POST_SLICE_FILTER" ver="1">Post Slice Filter</t>
+<t id="L_Z_MIN" ver="1">Z-Min</t>
+<t id="W_PRINT_PAUSED" ver="1">Tulostus Tauolla</t>
+<t id="L_PAUSE_HINT" ver="1">Vinkki: Sinun on sallittua siirtää suutinta ympäriinsä ja pursottaa lankaa jotta langan vaihto tai täyttää suutin, jos sulan materiaalin valumista esiintyy. Ohjain tallentaa aseman aloituksessa sinulle.</t>
+<t id="B_CONTINUE_PRINTING" ver="1">Jatka Tulostamista</t>
+<t id="W_REPETIER_HOST_UPDATE_CHECK" ver="1">Tarkista Repetier-Host:n Päivitykset</t>
+<t id="B_DOWNLOAD" ver="1">Lataa</t>
+<t id="B_REMIND_ME_LATER" ver="1">Muistuta myöhemmin</t>
+<t id="B_SKIP_VERSION" ver="1">Jätä väliin tämä versio</t>
+<t id="L_AVAILABLE_VERSION" ver="1">Version Saatavissa:</t>
+<t id="L_INSTALLED_VERSION" ver="1">Version Asennettu:</t>
+<t id="L_INFORMATION_ON_UPDATE" ver="1">Tieto on Päivityksessä</t>
+<t id="L_NO_NEW_UPDATES" ver="1">Uusia päivityksiä ei ole saatavilla.
+Käytät viimeisintä versiota.</t>
+<t id="L_UPDATE_STATUS" ver="1">Päivityksen Tila</t>
+<t id="W_SLICING_INFO" ver="1">Kerrostus Tieto</t>
+<t id="L_ACTION:" ver="1">Toimenpide:</t>
+<t id="L_DURATION:" ver="1">Kesto:</t>
+<t id="L_SLICER:" ver="1">Slicer:</t>
+<t id="L_START_JOB_AFTER_SLICING" ver="1">Aloita Työ Slicing:n jälkeen</t>
+<t id="W_ABOUT_REPETIER_HOST" ver="1">Jotakin Repetier-Host:sta</t>
+<t id="L_LICENCE_AND_LIBRARIES" ver="1">Licenssi ja Kirjastot</t>
+<t id="L_REPETIER_INFO" ver="1">Tämä ohjelmisto on kehitetty ohjaamaan RepRap:ia kuten 3D-tulostin. Se on parhaimmillaan käytettäessä Repetier-ohjaimen kanssa, joka tukee kaikkia ominaisuuksia. Muut tulostinohjaimet kuten Marlin, Teacup, Sprinter tai 5D GCode interpreter pitäisi toimia kunnon asetuksilla.</t>
+<t id="W_COPY_MARKED_OBJECTS" ver="1">Kopioi Merkitys Kohteet</t>
+<t id="L_NUMBER_OF_COPIES:" ver="1">Kopioiden Lukumäärä:</t>
+<t id="L_AUTO_POSITION_AFTER_COPY" ver="1">Automaattinen Sijoitus Kohteiden Lisäyksen jälkeen</t>
+<t id="L_PRINTING_LAYER_X_OF_Y" ver="1">Tulostus taso $1  $2:sta</t>
+<t id="L_BUILDING_PRINT_JOB..." ver="1">Kehittämässä Tulostustyötä...</t>
+<t id="L_PRINTING..." ver="1">Tulostamassa...</t>
+<t id="L_JOB_KILLED" ver="1">Työ Pysäytetty</t>
+<t id="L_PRINTJOB_FINISHED_AT" ver="1">Tulostustyö lopetettu $1</t>
+<t id="L_PRINTING_TIME:" ver="1">Tulostusaika:$1</t>
+<t id="L_LINES_SEND:X" ver="1">Lines Send:$1</t>
+<t id="L_FINISHED_IN" ver="1">Päättyy $1</t>
+<t id="L_TIME_H:" ver="1">$1h:</t>
+<t id="L_TIME_M:" ver="1">$1m:</t>
+<t id="L_TIME_S" ver="1">$1s</t>
+<t id="W_FIRMWARE_EEPROM_SETTINGS" ver="1">Laiteohjaimen EEPROM Asetukset</t>
+<t id="W_GCODE_NOT_FOUND" ver="1">Tehtyä G-Koodia Ei Löydetty</t>
+<t id="L_EXPECTED_FILENAME_AND_LOCATION" ver="1">Odotettu Tiedostonimi ja Sijainti</t>
+<t id="L_GCODE_NOT_FOUND_INFO" ver="1">En löytänyt tehtyä G-kooditiedostoa.
+
+Mahdolliset syyt:
+- slicer:lla virhe eikä voinut päättää viipalointia. Tarkista lokitulostus.
+- slicer tallensi tiedoston odottamattomalla tiedostonimellä.</t>
+<t id="B_CLOSE" ver="1">Sulje</t>
+<t id="W_REPETIER_SETTINGS" ver="1">Repetier:n Asetukset</t>
+<t id="L_BEHAVIOUR" ver="1">Käytös</t>
+<t id="L_FILES_AND_DIRECTORIES" ver="1">Tiedostot ja Hakemistot</t>
+<t id="L_GUI" ver="1">GUI</t>
+<t id="L_INFO_WORKDIR" ver="1">Työ hakemistossa, lokitiedosto ja tilapäiset tiedostot on slicing:a varten tallennettu.
+Jos lokitiedostot on mahdollistettu, siellä on tiedosto repetier.log ohjelman sulkemisen jälkeen. Ohjelman käynnistäminen tuhoaa aikaisemman 
+lokitiedoston! Lokitiedosto sisältää kaiken tulostimen tiedonsiirron, vaikka lokitiedosto olisi estetty lokinäkymässä.
+Loki muutokset ovat käytettävissä seuraavan käynnistyksen jälkeen.</t>
+<t id="L_LOG_SESSION" ver="1">Kirjaustapahtuma</t>
+<t id="REDUCE_TOOLBAR_SIZE" ver="1">Pienennä Työkalupalkin Kokoa</t>
+<t id="L_DISABLE_QUALITY_REDUCTION" ver="1">Estä Laadun Vähentäminen</t>
+<t id="L_EXISTING_WORKDIR_REQUIRED" ver="1">Olemassa oleva työhakemisto vaaditaan!</t>
+<t id="L_WORKDIR:" ver="1">Työhakemisto:</t>
+<t id="B_BROWSE" ver="1">Selaa...</t>
+<t id="L_SELECT_WORKING_DIRECTORY" ver="1">Valitse Työhakemisto</t>
+<t id="L_PAST_60_MINUTES" ver="1">Viimeiset 60 Minuuttia</t>
+<t id="W_3D_VISUALIZATION_SETTINGS" ver="1">3D Visualization Settings</t>
+<t id="L_COLORS" ver="1">Värit</t>
+<t id="L_EDITOR" ver="1">Muokkaus</t>
+<t id="L_VISUALIZATION" ver="1">Visualization:</t>
+<t id="L_AMBIENT_COLOR" ver="1">Ympäröivä väri:</t>
+<t id="L_BACKGROUND" ver="1">Tausta:</t>
+<t id="L_DIFFUSE_COLOR" ver="1">Hämärä väri:</t>
+<t id="L_DRAW_METHOD" ver="1">Piirtomenetelmä:</t>
+<t id="L_EDGES" ver="1">Reunat:</t>
+<t id="L_EXTRUDER_X:" ver="1">Suutin $1:</t>
+<t id="L_FACES" ver="1">Pinnat:</t>
+<t id="L_FILAMENT_VISUALIZATION_INFO" ver="1">Langan muoto on laskettu tason korkeuden ja leveyden ja paksuuden yli 
+  langan paksuuden mukaan, paksuuden ja E arvolla G-Koodissa. Toinen versio antaa paremmat tulokset,
+  jos tason korkeus vaihtelee, joka voi tapahtua uudemmissa Skeinforce versioissa.</t>
+<t id="L_FILAMENT_VISUALIZATION" ver="1">Langan Näyttäminen:</t>
+<t id="L_HOT_FILAMENT" ver="1">Kuuma Lanka:</t>
+<t id="L_HOT_FILAMENT_LENGTH" ver="1">Kuuman Langan Pituus:</t>
+<t id="L_LIGHT_X" ver="1">Valo $1</t>
+<t id="L_OBJECTS_OUTSIDE_PRINTBED" ver="1">Kohde Tulostuspöydän Ulkopuolella:</t>
+<t id="L_PRINTER_BASE" ver="1">Tulostin Perusta:</t>
+<t id="L_SELECTED_FACES" ver="1">Valikoidut Pinnat:</t>
+<t id="L_SELECTED_FILAMENT" ver="1">Valikoitu Lanka:</t>
+<t id="L_SPECULAR_COLOR" ver="1">Kirkasvärit:</t>
+<t id="L_WIDTH_OVER_THICKNESS" ver="1">Paksuusmitta:</t>
+<t id="L_X_DIRECTION" ver="1">X Suunta:</t>
+<t id="L_Y_DIRECTION" ver="1">Y Suunta:</t>
+<t id="L_Z_DIRECTION" ver="1">Z Suunta:</t>
+<t id="L_DISABLE_FILAMENT_VISUALIZATION" ver="1">Estä Langan Näyttäminen</t>
+<t id="L_ENABLE_LIGHT" ver="1">Salli Valo</t>
+<t id="L_SHOW_EDGES" ver="1">Näytä Reunat</t>
+<t id="L_SHOW_FACES" ver="1">Näytä Pinnat</t>
+<t id="L_SHOW_PRINTBED" ver="1">Näytä Tulostusalusta</t>
+<t id="L_PULSE_OBJECT_IF_NOT_PRINTABLE" ver="1">Pulssi mikäli kohde ei ole Tulostettava</t>
+<t id="TAB_GENERAL" ver="1">Yleinen</t>
+<t id="TAB_FILAMENT" ver="1">Lanka</t>
+<t id="TAB_MODEL" ver="1">Malli</t>
+<t id="TAB_LIGHTS" ver="1">Valot</t>
+<t id="L_LAYER_HEIGHT" ver="1">Tason Korkeus:</t>
+<t id="L_FILAMENT_DIAMETER" ver="1">Langan Halkaisija:</t>
+<t id="L_DRAW_METHOD_AUTODETECT" ver="1">Automaattitunnistus Parhain</t>
+<t id="L_DRAW_METHOD_VBOS" ver="1">VBOs (Nopein)</t>
+<t id="L_DRAW_METHOD_ARRAYS" ver="1">Ryhmä (Keskitaso)</t>
+<t id="L_DRAW_METHOD_IMMEDIATE" ver="1">Välitön (Hidas)</t>
+<t id="W_JOB_STATUS" ver="1">Työn Tila</t>
+<t id="L_ETA:" ver="1">ETA:</t>
+<t id="L_FINISH_TIME:" ver="1">Lopetusaika:</t>
+<t id="L_LINES_SEND:" ver="1">Sarja Lähetetty:</t>
+<t id="L_START_TIME:" ver="1">Aloitusaika:</t>
+<t id="L_STATUS:" ver="1">Tila:</t>
+<t id="L_TOTAL_LINES:" ver="1">Koko Sarja:</t>
+<t id="L_NO_JOB_DEFINED" ver="1">Ei Määritettyä Työtä</t>
+<t id="L_RUNNING..." ver="1">Käynnissä ...</t>
+<t id="L_FINISHED" ver="1">Lopetettu</t>
+<t id="L_ABORTED" ver="1">Keskeytetty</t>
+<t id="W_PRINTER_INFO" ver="1">Tulostimen Tiedot</t>
+<t id="L_CONNECTION_INFORMATION" ver="1">Yhteystiedot</t>
+<t id="L_PRINTER_DATA" ver="1">Tulostimen Arvot</t>
+<t id="L_BYTES_SEND:" ver="1">Bittiä Lähetetty:</t>
+<t id="L_ERRORS_RECEIVED:" ver="1">Virheitä Vastaanotettu:</t>
+<t id="L_FIRMWARE:" ver="1">Laiteohjain:</t>
+<t id="L_FIRMWARE_URL:" ver="1">Laiteohjain URL:</t>
+<t id="L_MACHINE_TYPE:" ver="1">Koneen Tyyppi:</t>
+<t id="L_NUMBER_EXTRUDER:" ver="1">Suuttimien Lukumäärä:</t>
+<t id="L_PROTOCOL:" ver="1">Protokolla:</t>
+<t id="L_NOT_VALID_83_FILENAME" ver="1">Kelpaamaton 8.3 tiedostonimi.</t>
+<t id="W_SD_CARD_UPLOAD" ver="1">SD-Kortilta Lähetys</t>
+<t id="L_UPLOADED_FILENAME:" ver="1">Lähetetty Tiedostonimi:</t>
+<t id="L_INCLUDE_JOB_FINISHED_COMMANDS" ver="1">Ota Mukaan Valmiin Työn Komennot</t>
+<t id="L_INCLUDE_START_END_CODE" ver="1">Ota Mukaan "Aloitus" ja "Loppu" Koodit</t>
+<t id="L_UPLOAD_EXTERNAL_FILE" ver="1">Lähetä Ulkopuolinen Tiedosto</t>
+<t id="L_UPLOAD_CURRENG_GCODE" ver="1">Lähetä Tämän Hetkinen G-Koodi</t>
+<t id="L_FILE:" ver="1">Tiedosto:</t>
+<t id="W_SAVE_GCODE_DIRECT_PRINT" ver="1">Tallenna G-Koodi Suoratulostukseen</t>
+<t id="L_SAVE_DIRECT_INFO" ver="1">Tämä tallennus toiminto on tarkoitettu tuottamaan G-koodia jota voidaan ajaa sd-muistikortilta. Tästä syystä se voidaan lisätä alku- ja loppukoodiin tavallisen lopetuskoodin mukana kuten ne olisivat suoritettu isännältä suoran tulostuksen aikana. Kaikki kommentit ja isännän käskyt poistetaan! Jos vain haluat tallentaa G-koodin muokkaimeesi, käytä silloin tallennus ikonia.</t>
+<t id="L_SAVE_AS_BINARY" ver="1">Tallenna Binäärimuodossa (Repetier-Firmware ohjaimelle)</t>
+<t id="B_SAVE" ver="1">Tallenna</t>
+<t id="W_SD_CARD_MANAGER" ver="1">SD Kortin Hallinta</t>
+<t id="L_FILENAME" ver="1">Tiedosto Nimi</t>
+<t id="L_SIZE" ver="1">Koko</t>
+<t id="L_UPLOAD_FILE" ver="1">Lähetä Tiedosto</t>
+<t id="L_DELETE_FILE" ver="1">Poista Tiedosto</t>
+<t id="L_RUN_CONTINUE_UPLOAD" ver="1">Aja Valittu Tiedosto / Jatka Tauotettua Tulostusta</t>
+<t id="L_STOP_UPLOAD" ver="1">Tauko/Pysäytä Ajo SD Tulostus</t>
+<t id="L_MOUNT_SD_CARD" ver="1">Liitä SD Kortti</t>
+<t id="L_UNMOUNT_SD_CARD" ver="1">Irroita SD-Kortti</t>
+<t id="L_PRINT_FINISHED" ver="1">Tulosta Lopetettu</t>
+<t id="L_UPLOAD_FINISHED" ver="1">Lähetä Lopetettu</t>
+<t id="L_SD_PRINTING..." ver="1">SD Tulostus ...</t>
+<t id="L_UPLOAD_FAILED" ver="1">Lähetä Tallennettu</t>
+<t id="L_FILE_DELETED" ver="1">Tiedosto Poistettu</t>
+<t id="L_DELETE_FAILED" ver="1">Poisto Epäonnistunut</t>
+<t id="L_UPLOADING_FILE..." ver="1">Lähetetään Tiedostoa ...</t>
+<t id="L_FIRMWARE_NO_DELETE" ver="1">Laiteohjaimesi ei toteuta tiedoston poistoa tai ohjaimella on tuntematon toiminto.</t>
+<t id="L_PRINT_ABORTED" ver="1">Tulostus Keskeytetty</t>
+<t id="L_PRINT_PAUSED" ver="1">Tulostustauko</t>
+<t id="L_REMOVE_SD_CARD" ver="1">Voit poistaa sd-kortin.</t>
+<t id="L_INFORMATION" ver="1">Tieto</t>
+<t id="L_REALLY_DELETE_X" ver="1">Todellako Poisto $1</t>
+<t id="SOUND_CONFIGURATION" ver="1">Ääniasetukset</t>
+<t id="L_SOUNDS" ver="1">Äänet</t>
+<t id="L_ERROR_SOUND" ver="1">Äänivirheet</t>
+<t id="L_PRINT_FINISHED_SOUND" ver="1">Tulostuksen Ääni Lopetettu</t>
+<t id="L_PRINT_PAUSED_SOUND" ver="1">Ääni Pysäytetylle Tulostukselle</t>
+<t id="L_SOUND_COMMAND_SOUND" ver="1">Ääni @sound Komennolle</t>
+<t id="L_FILE:X" ver="1">Tiedosto:$1</t>
+<t id="L_SELECT_WAV_FILE_TO_PLAY" ver="1">Valitse Soitettava WAV Tiedosto</t>
+<t id="W_SLIC3R_SETUP" ver="1">Slic3r Asetus</t>
+<t id="L_SLIC3R_SETUP" ver="1">Slic3r Aserus</t>
+<t id="L_SLIC3R_BLANK_BUNDLE" ver="6">Jätä tyhjäksi käyttääksesi "tukku" tai järjestelmäversiota.</t>
+<t id="L_SLIC3R_CONFIG_DIR" ver="1">Slic3r Asetus Hakemisto</t>
+<t id="L_SLIC3R_EXECUTABLE" ver="1">Slic3r Suoritettava Tiedosto</t>
+<t id="L_SLIC3R_INFO" ver="1">Näillä asetuksilla, voit käyttää erilaisia Slic3r:n versioita. Voit saada uuden version http://www.slic3r.org sivulta. Vähimmäis versiovaatimus on 0.9.0. Jätä kaikki kohdat yksinkertaisesti avoimeksi käyttäessäsi "tukku" versiota.</t>
+<t id="L_SLIC3R_BLANK_CONFIG" ver="1">Jätä avoimeksi käyttääksesi arvattua sijaintia.</t>
+<t id="W_EEPROM_MARLIN" ver="1">Marlin Firmware EEPROM Asetukset</t>
+<t id="L_M_ACCELERATION" ver="1">Kiihdytys:</t>
+<t id="L_M_ADVANCED_VARIABLES" ver="1">Kehittyneet Muuttujat:</t>
+<t id="L_M_HOMING_OFFSET" ver="1">Kotiinsiirto Etäisyys:</t>
+<t id="L_M_MAX_ACCELERATION" ver="1">Suurin Kiihdytys [mm/s²]:</t>
+<t id="L_M_MAX_FEEDRATE" ver="1">Suurimmat Syöttöarvot [mm/s]:</t>
+<t id="L_M_MAX_XY_JERK" ver="1">Suurin X-Y nytkäys [mm/s]</t>
+<t id="L_M_MAX_Z_JERK" ver="1">Suurin Z nytkäys [mm/s]</t>
+<t id="L_M_MIN_FEEDRATE" ver="1">Pienin Syöttöarvo [mm/s]</t>
+<t id="L_M_MIN_SEGMENT_TIME" ver="1">Pienin segmentti aikae [ms]</t>
+<t id="L_M_MIN_TRAVEL_FEEDRATE" ver="1">Pienin siirron syöttöarvo [mm/s]</t>
+<t id="L_M_PID_SETTINGS" ver="1">PID asetukset:</t>
+<t id="L_M_STEPS_PER_MM" ver="1">Askelta millimetriä kohti:</t>
+<t id="L_M_RETRACT_ACCELERATION" ver="1">Peruutus Kiihtyvyys:</t>
+<t id="B_M_LOAD" ver="1">Lataa uudelleen Asetukset</t>
+<t id="B_M_RESTORE" ver="1">Aseta Tehdasasetukset Uudelleens</t>
+<t id="B_M_SAVE" ver="1">Tallenna EEPROM:iin</t>
+<t id="L_M_CONFIRM_WRITE" ver="1">Asetukset tallennettu käytössä olevaan järjestelmätietoihin.
+Kirjoita Muutokset EEPROM:iin?</t>
+<t id="L_M_SETTINGS_STORED" ver="1">Asetukset Tallennettu</t>
+<t id="L_M_SAVE_RETIEVED" ver="1">Tallenna korjausmuutokset EEPROM:iin?</t>
+<t id="L_M_FACTORY_RETRIEVED" ver="1">Tehdas Asetukset Noudettu</t>
+<t id="L_SLICING_STL_FILE..." ver="1">Viipaloitu STL Tiedosto ...</t>
+<t id="L_SKEIN_STILL_RUNNING" ver="1">Viime viipalointityö vielä käynnissä. Uuden työn viipalointi on peruutettu.</t>
+<t id="L_SKEIN_KILLED" ver="1">$1 viipalointi prosessi lopetettu käyttäjän vaatimuksesta.</t>
+<t id="W_SKEIN_SETTINGS" ver="1">Skeinforge/SFACT Asetukset</t>
+<t id="L_SKEIN_APPLICARTION" ver="1">Skeinforge Sovellus:</t>
+<t id="L_SKEIN_CRAFT" ver="1">Skeinforge Kehitys:</t>
+<t id="L_SKEIN_PROFDIR_INFO" ver="1">Valitse profiilit skeinforge kokoonpanon alihakemistosta. Tämä on normaalisti HOME/.skeinforge/profiles. Jotakin räätälöityä versiota varten kuten SFACT tiedosto polku voi vaihdella.</t>
+<t id="L_SKEIN_PROFILES_DIRECTORY" ver="1">Profiili Hakemisto:</t>
+<t id="L_SKEIN_PYPY" ver="1">PyPy:</t>
+<t id="L_SKEIN_PYPY_INFO" ver="1">Jos sinulla on pypy asennettu, Skeinforge viipalointi toimii 3-4 kertaa nopeammin. Jos sinulla ei ole pypy:ä asennettuna, jätä se avoimeksi ja python interpreter:a käytetään sen tilalla. Voit ladata viimeisimmän pypy:n täältä http://www.pypy.org/</t>
+<t id="L_SKEIN_PYTHON" ver="1">Python Interpreter:</t>
+<t id="L_SKEIN_WORKDIR_INFO" ver="1">Työhakemisto määrää, missä SFACT säilyttää profiileja!</t>
+<t id="L_SKEIN_WORKING_DIRECTORY" ver="1">Työhakemisto:</t>
+<t id="L_SKEIN_OPEN_FILE" ver="1">Skeinforge Sovellus</t>
+<t id="L_SKEIN_OPEN_PYTHON" ver="1">Python Interpreter</t>
+<t id="L_SKEIN_OPEN_CRAFT" ver="1">Skeinforge Craft Sovellus</t>
+<t id="L_SKEIN_OPEN_PYPY" ver="1">Pypy Python Interpreter</t>
+<t id="L_SKEIN_SELECT_PROFILE_FOLDER" ver="1">Valitse profiilien Hakemisto</t>
+<t id="L_SKEIN_SELECT_WORKING_FOLDER" ver="1">Valitse Työhakemisto</t>
+<t id="L_FEEDRATE:" ver="1">Syöttöarvo:</t>
+<t id="L_FLOWRATE:" ver="1">Virtausarvo:</t>
+<t id="L_UPDATE_NO_CONNECTION" ver="1">Päivitysserveriin ei saada yhteyttä!</t>
+<t id="L_MOVE_CAMERA" ver="1">Siirrä Kameraa</t>
+<t id="L_MOVE_OBJECT" ver="1">Siirrä Kohdetta</t>
+<t id="L_MOVE_VIEWPOINT" ver="1">Siirrä Katselukohtaa</t>
+<t id="L_RESET_VIEW" ver="1">Näkymä alkutilaan</t>
+<t id="L_ROTATE" ver="1">Kierrä</t>
+<t id="L_TOP_VIEW" ver="1">Näkymä Ylhäältä</t>
+<t id="T_ZOOM_VIEW" ver="1">Zoom</t>
+<t id="T_CLEAR_OBJECTS" ver="1">Puhdista</t>
+<t id="L_DEBUG_OPTIONS" ver="2">Virheiden Valinta</t>
+<t id="L_X_MIN:" ver="3">X Min</t>
+<t id="L_X_MAX:" ver="3">X Max</t>
+<t id="L_Y_MIN:" ver="3">Y Min</t>
+<t id="L_Y_MAX:" ver="3">Y Max</t>
+<t id="L_BED_LEFT:" ver="3">Tulostuspöytä Vasen:</t>
+<t id="L_BED_FRONT:" ver="3">Tulostuspöytä Eteen:</t>
+<t id="L_SHAPE_INFO" ver="3">Min ja max arvot määrittää suuttimen koordinaateille. Nämä koordinaatit voivat olla negatiivisia ja tulostuspöydän ulkopuolella. Tulostuspöydän vasen/eteen selvittävät tulostuspöydän aloituksen. Muuttamalla min/max arvoja voit siirtää nollapistettä tulostuspöydän keskellä, jos on tuettuna koneen ohjainohjelmassa.</t>
+<t id="L_SELECTION_BOX" ver="3">Valinta Laatikko:</t>
+<t id="L_FILAMENT_NONE" ver="3">Ei mitään/Sama kuin Suuttimen 1</t>
+<t id="L_REALLY_QUIT" ver="3">Tulostus ei ole päättynyt. Lopetetaan kuitenkin?</t>
+<t id="M_DONATE" ver="3">Lahjoita tai Tue</t>
+<t id="L_FAN" ver="4">Puhallin</t>
+<t id="L_HOME_X:" ver="4">Koti X:</t>
+<t id="L_HOME_Y:" ver="4">Koti Y:</t>
+<t id="L_HOME_Z:" ver="4">Koti Z:</t>
+<t id="L_MIN" ver="4">Min</t>
+<t id="L_MAX" ver="4">Max</t>
+<t id="L_PAUSED_FIRMWARE" ver="4">Tulostimesi pyytää taukoa.</t>
+<t id="L_CREATE_FOLDER" ver="4">Luo uusi Kansio</t>
+<t id="L_CREATE_FOLDER_INFO" ver="4">Anna kansion nimi:</t>
+<t id="L_UPLOADING_TIME" ver="4">Siirron kestoaika: $1</t>
+<t id="L_FILAMENT_POS" ver="4">Tiedosto: $1</t>
+<t id="L_TRAVEL_VISUALIZATION_DISABLED" ver="4">Siirron näyttäminen estetty</t>
+<t id="M_HIDE_TRAVEL" ver="4">Piilota Siirto</t>
+<t id="L_TRAVEL_VISUALIZATION_ENABLED" ver="4">Siirron näyttäminen sallittu</t>
+<t id="M_SHOW_TRAVEL" ver="4">Näytä Siirto</t>
+<t id="L_TRAVEL_MOVES:" ver="4">Siirron Liikkeet:</t>
+<t id="L_DISABLE_TRAVEL_MOVES_VIS" ver="4">Estä Siirron Liikkeiden Näyttäminen</t>
+<t id="L_NUMBER_OF_EXTRUDER:" ver="5">Suuttimien Määrä:</t>
+<t id="L_NEW_FOLDER" ver="5">Uusi Kansio</t>
+<t id="L_USE_PARALLEL_PROJECTION" ver="5">Käytä Rinnakkaisprojektiota</t>
+<t id="L_USE_RED_GREEN_SWITCH" ver="5">Käytä puna/vihreä kytkinnäppäimiä (vaatii uudelleenkäynnistyksen)</t>
+<t id="L_SLIC3R_NOT_FOUND" ver="6">Slic3r:ää ei löydetty.</t>
+<t id="L_ANALYSING_STL" ver="6">Analysoidaan STL tiedostoa ...</t>
+<t id="L_SLICING_STL" ver="6">Viipaloimassa STL tiedostoa ...</t>
+<t id="L_PYPY_NOT_FOUND" ver="6">Pypy tai Python interpreter ei löytynyt.</t>
+<t id="L_SKEINCRAFT_NOT_FOUND" ver="6">Skeinforge craft ei löytynyt.</t>
+<t id="L_PYTHON_NOT_FOUND" ver="6">Python interpreter ei löytynyt.</t>
+<t id="L_SKEINFORGE_NOT_FOUND" ver="6">Skeinforge ei löytynyt.</t>
+<t id="L_SKEINCRAFT_PROFILES_NOT_FOUND" ver="6">Skeinforge/SFACT profiili hakemistoa ei löytynyt.</t>
+<t id="B_REFRESH_PORTS" ver="6">Päivitä Portit</t>
+<t id="L_ROS_PRINTABLE_HEIGHT:" ver="6">Tulostettava Korkeus:</t>
+<t id="L_ROS_PRINTABLE_RADIUS:" ver="6">Tulostettava Säde:</t>
+<t id="L_CARTESIAN_PRINTER" ver="6">Perinteinen Tulostin</t>
+<t id="L_CARTESIAN_PRINTER_DUMP" ver="6">Perinteinen Tulostin (jätealue mukana)</t>
+<t id="L_ROSTOCK_CIRCLE" ver="6">Rostock Tulostin (pyöreä tulostusmuoto)</t>
+<t id="L_CORRECT_NORMALS" ver="7">Käytä oikeita säännönmukaisuutta (näyttää paremmalta, tarvitsee enemmän muistia)</t>
+<t id="L_WARNING" ver="8">Varoitus</t>
+<t id="L_HEATERS_ON_QUEST" ver="8">Osa lämmittimistä on yhä kytkettynä. Pitäisikö ne sammuttaa?</t>
+<t id="L_OBJECTS_OUTSIDE_SLICE_QUEST" ver="8">Vähintään yksi kohde on tulostusalueen ulkopuolella. Keskeytetäänkö viipalointi?</t>
+<t id="L_CNC_ROUTER" ver="8">CNC Radoitus</t>
+<t id="L_SLIC3R_VERSION" ver="8">Slic3r Versio</t>
+<t id="L_MODEL_ERRORS" ver="9">Mallinnus Virheet:</t>
+<t id="L_SPLIT" ver="9">Jaa</t>
+<t id="L_YES" ver="9">Kyllä</t>
+<t id="L_NO" ver="9">Ei</t>
+<t id="L_MODEL_CHANGED_RELOAD" ver="9"><![CDATA[Yksi tai useampi kohdetiedostoista on muuttunut.
+Ladataanko kohteet uudelleen?]]></t>
+<t id="L_FILES_CHANGED" ver="9">Tiedostot muutettu</t>
+<t id="L_INNER_FACES" ver="9">Sisäpinnat:</t>
+<t id="L_BACKGROUND_TOP" ver="9">Background Top:</t>
+<t id="L_BACKGROUND_BOTTOM" ver="9">Background Bottom:</t>
+<t id="L_PRINTER_FRAME" ver="9">Tulostien Kehys:</t>
+<t id="L_ISOMETRIC_VIEW" ver="9">Isometrinen Kuvanto</t>
+<t id="L_BOTTOM_VIEW" ver="9">Pohja Kuvanto</t>
+<t id="L_LEFT_VIEW" ver="9">Vasen Kuvanto</t>
+<t id="L_RIGHT_VIEW" ver="9">Oikea Kuvanto</t>
+<t id="L_FRONT_VIEW" ver="9">Etukuvanto</t>
+<t id="L_BACK_VIEW" ver="9">Takakuvanto</t>
+<t id="M_VIEW" ver="9">Näkymä</t>
+<t id="M_SHOW_EDGES" ver="9">Näytä Reunat</t>
+<t id="M_SHOW_FACES" ver="9">Näytä Pinnat</t>
+<t id="L_ANA_MODIFIED" ver="9">Muutettu:</t>
+<t id="L_ANA_MANIFOLD" ver="9">Monimuotoinen:</t>
+<t id="L_ANA_INTERSECTING_TRIANGLES" ver="9">Kiinnostavat kolmiot:</t>
+<t id="L_ANA_NORMALS" ver="9">Normaalit:</t>
+<t id="L_ANA_LOOP_EDGES" ver="9">Silmukkareunat:</t>
+<t id="L_ANA_HIGHLY_CONNECTED" ver="9">Korkeasti yhdistetyt reunat:</t>
+<t id="L_ANA_VERTICES" ver="9">Pisteet:</t>
+<t id="L_ANA_EDGES" ver="9">Reunat:</t>
+<t id="L_ANA_FACES" ver="9">Pinnat:</t>
+<t id="L_ANA_SHELLS" ver="9">Kuoret:</t>
+<t id="L_ANA_ORIENTED" ver="9">Suunnattu</t>
+<t id="L_ANA_NOT_ORIENTED" ver="9">Suuntaamaton</t>
+<t id="M_TOOLS" ver="9">Työkalut</t>
+<t id="M_BELT_CALCULATOR" ver="9">Vyölaskin</t>
+<t id="M_LEADSCREW_CALCULATOR" ver="9">Johtoruuvin Laskin</t>
+<t id="L_MOTOR_STEP_ANGLE" ver="9">Moottorin askelkulma</t>
+<t id="L_DRIVER_MICROSTEPPING" ver="9">Ohjaimen Mikroaskellus</t>
+<t id="L_BELT_PITCH" ver="9">Hihnan Heitto</t>
+<t id="L_TOOTH_COUNT" ver="9">Hammasluku</t>
+<t id="B_CALCULATE" ver="9">Laskelma</t>
+<t id="L_STEPS_PER_MM" ver="9">Arvo askeleille per mm</t>
+<t id="L_TOOTH_COUNT_MUST_INT" ver="9">Hammasluvun täytyy olla kokonaisluku</t>
+<t id="L_LEADSCREW_PITCH" ver="9">Johtoruuvin nousu</t>
+<t id="L_GEAR_RATIO" ver="9">Välityssuhde</t>
+<t id="L_SERIAL_CONNECTION" ver="9">Sarja Yhteys</t>
+<t id="L_VIRTUAL_CONNECTION" ver="9">Virtuaali Tulostin</t>
+<t id="L_REPETIER_SERVER_CONNECTION" ver="9">Repetier-Serveri</t>
+<t id="L_CONNECTOR" ver="9">Liitin</t>
+<t id="L_DISABLED" ver="9">Estetty</t>
+<t id="L_DTR_LOW_HIGH" ver="9">DTR Korkea->alhainen</t>
+<t id="L_DTR_LOW_HIGH_LOW" ver="9">DTR alhainen->korkea->alhainen</t>
+<t id="L_DTR_TOGGLE" ver="9">DTR vipu</t>
+<t id="L_RESET_ON_CONNECT" ver="9">Alkutilaan Yhdistettäessä</t>
+<t id="L_RESET_ON_EMERGENCY" ver="9">Alkutilaan Hätätilassa</t>
+<t id="L_SEND_EMERGENCY_CMD" ver="9">Lähetä hätäkomento</t>
+<t id="L_SEND_EMERGENCY_CMD_DTR_TOGGLE" ver="9">Lähetä hätäkomento + DTR korkea->matala</t>
+<t id="L_SEND_EMERGENCY_CMD_RECONNECT" ver="9">Lähetä hätäkomento ja yhdistä uudelleen</t>
+<t id="L_FILE_ASSOCIATIONS" ver="9">Tiedosto Yhteydet</t>
+<t id="L_ASSOCIATE_EXTENSIONS" ver="9">Laajennetut Jatkeet</t>
+<t id="L_CONNECTION_FAILED" ver="9">Yhteys katkennut seuraavaan virheeseen: $1. Varmistu että tuostimesi on liitetty, yhteystiedot on sallittu ja oikeita. Tulostimen asetukset avattu?</t>
+<t id="L_AUTOENABLE_PARALLEL_TOPVIEW" ver="9">Salli rinnakkais moodi ylhäältä katsannossa</t>
+<t id="L_RESET_DEFAULTS" ver="9">Alkutilan asetukset</t>
+<t id="L_REMOVED_DEGENERATED" ver="9">Poistettu huonontuneet kolmiot:</t>
+<t id="L_REMOVED_ISOLATED" ver="9">Poistettu suojatut kolmiot:</t>
+<t id="L_REMOVED_DOUBLE" ver="9">Poistettu kaksoiskolmiot:</t>
+<t id="L_STARTING_ANALYSER" ver="9">Käynnistetään kohteen analysaattori ...</t>
+<t id="L_ANALYSER_FINISHED" ver="9">Analyysi lopetettu.</t>
+<t id="L_LOADING_3D_FAILED" ver="9">3D Tiedoston $1 lataus epäonnistunut.</t>
+<t id="L_OBJECT_INFORMATIONS" ver="9">Kohteen Tiedot</t>
+<t id="L_MINIMUM:" ver="9">Pienin:</t>
+<t id="L_MAXIMUM:" ver="9">Suurin:</t>
+<t id="L_SIZE:" ver="9">Koko:</t>
+<t id="L_VOLUME:" ver="9">Tilavuus:</t>
+<t id="L_SURFACE:" ver="9">Pinta:</t>
+<t id="L_DIMENSIONS:" ver="9">Mitat:</t>
+<t id="L_SPLIT_OBJECT" ver="9">Jaa Kohde</t>
+<t id="L_FIX_NORMALS" ver="9">Korjaa Säännönmukaiseksi</t>
+<t id="M_FIT_PRINTER" ver="9">Sovita Tulostin</t>
+<t id="M_FIT_OBJECTS" ver="9">Sovita Kohteet</t>
+<t id="IMPORTING_1" ver="9">Tuonti $1</t>
+<t id="L_LOADING..." ver="9">Lataus ...</t>
+<t id="L_INTERSECTION_TESTS" ver="9">Poikkileikkauskokeilut</t>
+<t id="L_FIXING_NORMALS" ver="9">Korjaamassa säännönmukaisiksi</t>
+<t id="L_ANA_FIXED_COLLINEAR_TRIANGLES" ver="9">Korjattu samalla suoralla olevat kolmiot:</t>
+<t id="L_ANA_CORRECTED_NORMAL_ORIENTATIONS" ver="9">Korjattu säännönmukaiseksi kohdistukseksi:</t>
+<t id="L_OBJECT_IS_MANIFOLD" ver="9">Kohde on monimuotoinen.</t>
+<t id="L_OBJECT_IS_NON_MANIFOLD" ver="9">Kohde ei ole monimuotoinen. Viipalointi voi tuottaa väärän tuloksen. Korjaa kohteen tiedosto ensiksi, ole hyvä.</t>
+<t id="L_SHOW_COMPASS" ver="9">Näytä Kompassi</t>
+<t id="L_CONFIRM_DELETE_JOB" ver="10">Oletko varma halutessasi poistaa työn $1?</t>
+<t id="L_PRINT_STATE_SAVED_SUCCESSFULLY" ver="10">Tila on tallennettu onnistuneesti</t>
+<t id="M_POSPONED_JOBS" ver="10">Siirretyt Työt</t>
+<t id="M_RESUME_JOB" ver="10">Jatka</t>
+<t id="M_POSTPONE_JOB" ver="10">Siirrä Tämänhetkinen Työ</t>
+<t id="W_POSTPONED_PRINT_JOBS" ver="10">Siirretyt Tulostus Työt</t>
+<t id="M_POSTPONED_JOB_SELECT_JOB" ver="10">Jatka Työtä</t>
+<t id="M_POSTPONED_JOB_KILL_JOB" ver="10">Poista Työ</t>
+<t id="M_POSTPONED_JOB_RENAME_JOB" ver="10">Uudelleennimeä Työ</t>
+<t id="L_POSTPONED_JOB_NAME" ver="10">Työnimi</t>
+<t id="L_NAME_POSTPONED_JOB" ver="10">Ole hyvä nimeä työ</t>
+<t id="L_POSTPONED_JOB_DIALOG_DESCRIPTION" ver="10">Työtila tallennetaan kerran sen hetkisen tason ollessa valmis. Voit myös pakottaa tallennuksen työtilanteessa samalla tai jatkaa tulostusta.</t>
+<t id="B_FORCE_SAVE_POSTPONED_JOB" ver="10">&amp;Pakota</t>
+<t id="B_RESUME_PRINTING_JOB" ver="10">&amp;Jatka</t>
+<t id="W_POSTPONED_JOB_DIALOG" ver="10">Siirrä Tulostus Työtä</t>
+<t id="M_TOGGLE_PRINTER_ID" ver="10">Käännä vastakkaiseen suuntaan tulostimen tunnistusnäkymää</t>
+<t id="L_PRINTER_ID" ver="10">Tulostimen tunnus</t>
+<t id="L_BGCOLOR:" ver="10">Taustaväri:</t>
+<t id="L_EDIT_INSTANCE_NAME" ver="10">Muokkaa Tulostimen tunnusta</t>
+<t id="L_ANAYLSING" ver="10">Analysoidaan</t>
+<t id="L_NOT_TESTED" ver="10">Kokeilematon</t>
+<t id="L_CONNECTOR:" ver="10">Liitin:</t>
+<t id="L_NORMAL_CORRECTION_IMPOSSIBLE" ver="10">Tavallinen liitäntä ei ole mahdollinen ei monimuotoisilla verkoilla.</t>
+<t id="M_MED_HEIGHT_MAP" var="10">Tulostinalustan korkeuskartta</t>
+<t id="M_CREATE_HEIGHT_MAP" var="10">Luo Korkeuskartta</t>
+<t id="B_MEASURE_HEIGHTS" ver="10">Mittaa Korkeudet</t>
+<t id="B_RESULT_TO_CLIPBOARD" ver="10">Tulos Leikepöydälle</t>
+<t id="L_SCAN_AREA" ver="10">Tutki Alue</t>
+<t id="L_SCAN_RESULTS" ver="10">Tutki Tulokset</t>
+<t id="L_X_POINTS:" ver="10">X pisteet:</t>
+<t id="L_Y_POINTS:" ver="10">Y pisteet:</t>
+<t id="L_Z_MIN:" ver="10">Z min:</t>
+<t id="L_Z_MAX:" ver="10">Z max:</t>
+<t id="L_Z_AVG:" ver="10">Z ka.:</t>
+<t id="L_Z_CENTER:" ver="10">Z center</t>
+<t id="L_CUT_FACES" ver="10">Leikkaa Kohteet</t>
+<t id="L_CUT_POSITION" ver="10">Sijainti</t>
+<t id="L_CUT_INCLINATION" ver="10">Kallistus</t>
+<t id="L_CUT_AZIMUTH" ver="10">Atsimuutti</t>
+<t id="UNITS_OF_IMPORTED_OBJECTS" ver="10">Tuotujen kohteiden yksiköt</t>
+<t id="OBJECTS_ARE_IN_MILLIMETER" ver="10">Kohteiden mitat ovat millimetreinä</t>
+<t id="OBJECTS_ARE_IN_INCHES" ver="10">Kohteiden mitat ovat tuumina</t>
+<t id="OBJECTS_ARE_IN_FOOT" ver="10">Kohteiden mitat ovat jalkoina</t>
+<t id="OBJECTS_ARE_IN_METER" ver="10">Kohteiden mitat ovat metreinä</t>
+<t id="B_RESET" ver="10">Nollaus</t>
+<t id="L_SLIC3R_INFO2" ver="10">Slic3r on erillinen, lisäohjelma, joka voidaan käynnistää erikseen. Lisätietojen saamiseksi ole hyvä ja vieraile sivulla: http://www.slic3r.org</t>
+<t id="L_SKEINFORGE_INFO" ver="10">Skeinforge on erillinen, lisäohjelma, joka voidaan käynnistää erikseen. Lisätietojen saamiseksi ole hyvä ja vieraile sivulla: http://fabmetheus.crsndoo.com/</t>
+<t id="L_PRINT_SETTINGS:" ver="10">Tulostusasetus:</t>
+<t id="L_PRINTER_SETTINGS:" ver="10">Tulostimen Asetukset:</t>
+<t id="L_OVERRIDE_SLIC3R_SETTINGS" ver="10">Ylikirjoita Slic3r Asetukset</t>
+<t id="B_COPY_PRINT_SETTINGS_TO_OVERRIDE" ver="10">Kopioi Tulostusasetukset Ylikirjoitusta varten</t>
+<t id="L_ENABLE_SUPPORT" ver="10">Salli tuki</t>
+<t id="L_ENABLE_COOLING" ver="10">Salli Jäähdytys</t>
+<t id="L_LAYER_HEIGHT:" ver="10">Tason Korkeus:</t>
+<t id="L_INFILL_DENSITY" ver="10">Täytön Tiheys</t>
+<t id="L_INFILL_ANGLE" ver="10">Täytön Kulma</t>
+<t id="L_INFILL_PATTERN:" ver="10">Täytön Kuvio:</t>
+<t id="L_SOLID_INFILL_PATTERN:" ver="10">Kiinteän Täytön Kuvio:</t>
+<t id="L_SHOW_EXTRUDER" ver="10">Näytä Suutin</t>
+<t id="L_SHOW_BED" ver="10">Näytä Tulostusalusta</t>
+<t id="L_SHOW_OUTPUT" ver="10">Näytä Tuloste</t>
+<t id="L_SHOW_TARGET_TEMPERATURES" ver="10">Tavoite Lämpötilat</t>
+<t id="L_SHOW_AVERAGE_TEMPERATURES" ver="10">Keskiarvo Lämpötilat</t>
+  <t id="L_NOT_VALID_SD_FILENAME" ver="10">Tiedostonimi sisältää laittomia merkkejä tai on liian pitkä. Älä käytä enempää kuin 26 merkkiä.</t>
+  <t id="B_ADD_SLICER" ver="10">Lisää Slicer</t>
+  <t id="B_DELETE" ver="10">Poista</t>
+  <t id="L_SLICER" ver="10">Slicer</t>
+  <t id="L_CONFIGURATION:" ver="10">Rakenne:</t>
+  <t id="L_SETUP" ver="10">Laitteisto</t>
+  <t id="L_SLICER_CONFIGURATIONS" ver="10">Slicer Rakenteet</t>
+  <t id="L_NAME" ver="10">Nimi</t>
+  <t id="L_SLICER_MANAGER" ver="10">Slicer Hallinta</t>
+  <t id="L_ASK_LOAD_GCODE" ver="10">Slicer loi uuden g-koodi tiedoston. Ladataanko se?</t>
+  <t id="L_QUESTION" ver="10">Kysymys</t>
+  <t id="L_FILE_TYPES:" ver="10">Tiedosto Tyypit:</t>
+  <t id="L_WATCHDIRECTORY_INFO" ver="10">Watch hakemisto näyttää täsmennetyt tiedostotyypit yläpuolella. Eroita monikertaiser puolipisteellä kuten &quot;g;gcode&quot;. Jokaisella tulostimella on omat asetuksensa, jota on tarkkailtava. Jos tiedosto on uusi tai muokattu, kun kytket Repetier-Host:iin se näyttää tiedostot tehostettuna nopeaan tuontiin.</t>
+  <t id="B_LOAD" ver="10">Kuorma</t>
+  <t id="L_CHANGED" ver="10">Muutettu</t>
+  <t id="L_NEW" ver="10">Uusi</t>
+  <t id="L_DIRECTORY:" ver="10">Hakemisto:</t>
+  <t id="L_ACTION" ver="10">Toiminta</t>
+  <t id="L_FILE" ver="10">Tiedosto</t>
+  <t id="L_STATUS" ver="10">Tilanne</t>
+  <t id="L_SEND_ETA_DISPLAY" ver="10">Lähetä ETA tulostimen näytölle</t>
+  <t id="L_ETA_SHORT$1" ver="10">ETA $1</t>
+  <t id="L_ETE_SHORT$1" ver="10">ETE $1</t>
+  <t id="L_CACHING..." ver="10">Välimuistissa ... $1%</t>
+  <t id="M_MAKE_SCREENSHOT" ver="10">Tallenna Kuvankaappaus</t>
+  <t id="PNG_FILTER" ver="10">PNG-Kuvat|*.png</t>
+  <t id="L_INVALID_FILENAME" ver="10">Kelpaamaton tiedoston nimi.</t>
+  <t id="L_EEPROM_IMPORT_FAILED" ver="10">EEPROM:n tietojen tuonti epäonnistui. Epäkelpo tiedsotomuoto.</t>
+  <t id="L_EXPORT_EEPROM_DATA" ver="10">Vie EEPROM:n Tieto</t>
+  <t id="L_IMPORT_EEPROM_DATA" ver="10">Tuo EEPROM:n Tieto</t>
+<t id="L_TIME_H" ver="10">$1h </t>
+<t id="L_TIME_M" ver="10">$1m </t>
+<t id="L_SHOW_OUTPUT_EXTRUDER" ver="10">Suuttimen Ulostulo</t>
+<t id="L_SHOW_OUTPUT_BED" ver="10">Tulostusalustan Ulostulo</t>
+<t id="M_SHOW_BED_POWER" ver="10">Näytä Tulostusalustan Virta</t>
+  <t id="L_ENABLE_ANTI_ALIAS" ver="10">Salli rypyttömyys, jos mahdollista (hidastaa näkymää, tarvitsee uudelleenkäynnistyksen)</t>
+  <t id="L_MODEL_ERRORS_EDGE:" ver="10">Mallinnusvirheet (nurkka):</t>
+  <t id="L_CUT_FACES:" ver="10">Leikkaa pinnat:</t>
+
+</translation>
+
