@@ -124,3 +124,8 @@ Questo documento raccoglie, descrive e analizza dettagliatamente tutte le funzio
     * `True`: Genera la depressione (aspirazione/vuoto), permettendo alla ventosa di afferrare e trattenere saldamente un oggetto.
     * `False`: Interrompe l'aspirazione e inverte brevemente il flusso d'aria (soffiaggio di rilascio) per staccare istantaneamente l'oggetto manipolato.
   * `is_queued` (bool): Impostato su `False` per attivare/disattivare la ventosa in tempo reale.
+## Implementazione delle funzioni
+* Per implementare le funzioni dovrai chiamare due oggetti:
+  * `dobotEdu.magician`: per interagire con il Dobot Magician.
+  * `dobotEdu.m_lite`: per interagire con il Dobot Magician Lite.
+* Per usare le funzioni, chiamare uno dei due oggetti e aggiungere alla fine dell'oggetto la funzione che si vuole usare preceduta da un punto. Ad esempio, per connettere un Dobot Magician si fà in questo modo: `dobotEdu.magician.connect(port)`. Questo codice connetterà al programma un Dobot Magician collegato alla porta COM `port`. Per ulteriori esempi, controllare i file contenuti nella cartella code.
