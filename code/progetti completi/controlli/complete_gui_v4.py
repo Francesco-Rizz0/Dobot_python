@@ -2,26 +2,27 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from DobotEDU import *
 
-# Associazione delle API reali
+# Associazione delle API reali provenienti dalla libreria DobotEDU per i due modelli supportati
 api_magician = dobotEdu.magician
 api_lite = dobotEdu.m_lite
 
 # --- COSTANTI JOG ---
-JOG_IDLE = 0
-JOG_X_PLUS = 1
-JOG_X_MINUS = 2
-JOG_Y_PLUS = 3
-JOG_Y_MINUS = 4
-JOG_Z_PLUS = 5
-JOG_Z_MINUS = 6
-JOG_R_PLUS = 7
-JOG_R_MINUS = 8
+# Identificativi numerici richiesti dal firmware del robot per definire la direzione del movimento manuale
+JOG_IDLE = 0       # Stato di riposo / Arresto del movimento
+JOG_X_PLUS = 1     # Movimento in avanti lungo l'asse X
+JOG_X_MINUS = 2    # Movimento all'indietro lungo l'asse X
+JOG_Y_PLUS = 3     # Movimento verso sinistra lungo l'asse Y
+JOG_Y_MINUS = 4    # Movimento verso destra lungo l'asse Y
+JOG_Z_PLUS = 5     # Movimento verso l'alto (sollevamento) lungo l'asse Z
+JOG_Z_MINUS = 6    # Movimento verso il basso (discesa) lungo l'asse Z
+JOG_R_PLUS = 7     # Rotazione dell'end-effector in senso antiorario (asse R)
+JOG_R_MINUS = 8    # Rotazione dell'end-effector in senso orario (asse R)
 
 class UniversalDobotGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Universal Dobot Control Panel V4")
-        self.root.geometry("850x780") # Leggermente aumentata l'altezza per ospitare il nastro
+        self.root.geometry("850x780") 
         self.root.configure(bg="#2C313C")
         
         self.port = None
@@ -94,7 +95,7 @@ class UniversalDobotGUI:
         self.lbl_status_msg = ttk.Label(frame_status, text="Stato: Disconnesso", style="Status.TLabel")
         self.lbl_status_msg.pack(anchor=tk.W, pady=(15, 0))
 
-        # NUOVO BOX: Controllo Nastro Trasportatore (Sotto la posizione reale)
+        # Box: Controllo Nastro Trasportatore
         frame_conveyor = ttk.Frame(left_container, style="Card.TFrame", padding=15)
         frame_conveyor.pack(fill=tk.BOTH, expand=True)
         
@@ -108,7 +109,6 @@ class UniversalDobotGUI:
         self.conveyor_slider.set(0)
         self.conveyor_slider.pack(fill=tk.X, pady=(5, 10))
         
-        # Bottone rapido per arrestare il nastro
         ttk.Button(frame_conveyor, text="STOP NASTRO", command=self.stop_conveyor).pack(fill=tk.X, pady=2)
 
         # --- COLONNA DESTRA ---
@@ -164,13 +164,25 @@ class UniversalDobotGUI:
     def create_jog_button(self, parent, text, cmd_id, row, col):
         btn = ttk.Button(parent, text=text)
         btn.grid(row=row, column=col, padx=5, pady=4, sticky="ew")
+        # Il click premuto (<ButtonPress-1>) avvia l'invio continuo del comando JOG
         btn.bind("<ButtonPress-1>", lambda event: self.start_jog(cmd_id))
+        # Il rilascio del click (<ButtonRelease-1>) ferma immediatamente il movimento impostando lo stato IDLE
         btn.bind("<ButtonRelease-1>", lambda event: self.stop_jog())
 
     def get_api(self):
+        """
+        Restituisce l'istanza corretta delle API di DobotEDU in base al modello selezionato.
+        - 'lite': Rimanda all'interfaccia firmware dedicata al Dobot Magician Lite.
+        - 'magician': Rimanda all'interfaccia per il Dobot Magician Standard.
+        """
         return api_lite if self.model_var.get() == "lite" else api_magician
 
     def update_port_list(self):
+        """
+        Scansiona le porte COM del sistema per trovare i dispositivi Dobot connessi.
+        Utilizza api.search_dobot() che interroga il sistema operativo e restituisce una
+        lista di dizionari, ognuno contenente informazioni come 'portName' (es. 'COM3').
+        """
         if self.is_connected: return
         try:
             ports = api_magician.search_dobot()
@@ -184,12 +196,18 @@ class UniversalDobotGUI:
             self.port_combo.set("Errore ricerca porte")
 
     def toggle_connection(self):
+        """Gestisce lo sdoppiamento logico del pulsante unificato di connessione."""
         if self.is_connected:
             self.disconnect_robot()
         else:
             self.connect_robot()
 
     def connect_robot(self):
+        """
+        Stabilisce la connessione seriale USB con il robot selezionato.
+        In caso di successo, blocca le modifiche alla GUI per preservare la stabilità
+        e avvia il thread/ciclo per il monitoraggio in tempo reale della posizione.
+        """
         port_selected = self.port_combo.get()
         if not port_selected or "Seleziona" in port_selected or "Nessun" in port_selected:
             messagebox.showwarning("Attenzione", "Seleziona una porta COM valida!")
@@ -235,24 +253,31 @@ class UniversalDobotGUI:
         try:
             self.lbl_status_msg.config(text="Connessione in corso...")
             self.root.update_idletasks()
+            
+            # Sovrascriviamo le funzioni di callback interne per evitare sovrapposizioni indesiderate
             api.on_pause = lambda: None
             api.on_resume = lambda: None
             
+            # api.connect_dobot(port_name): Inizializza la comunicazione sulla porta specificata.
+            # Ritorna True se l'handshake seriale va a buon fine, altrimenti False.
             if api.connect_dobot(port_name=port_selected):
                 self.port = port_selected
                 self.is_connected = True
                 
-                # Blocca la modifica del tipo di dispositivo
+                # Disabilitazione dei selettori hardware per evitare cambi di modello "a caldo" a robot connesso
                 self.radio_magician.config(state="disabled")
                 self.radio_lite.config(state="disabled")
                 self.port_combo.config(state="disabled")
                 
-                # Cambia il testo e lo stile del bottone
+                # Transizione grafica del bottone in stato disconnessione
                 self.btn_toggle_connect.config(text="DISCONNETTI ROBOT", style="TButton")
                 self.lbl_status_msg.config(text=f"Connesso ({selected_model.upper()}) su {self.port}")
                 
+                # Invia subito le velocità impostate sugli slider al firmware del robot
                 self.update_speed()
                 self.update_rail_speed()
+                
+                # Avvia il loop asincrono di lettura delle coordinate cartesiane reali
                 self.read_pose_loop()
             else:
                 messagebox.showerror("Errore", "Impossibile stabilire la connessione.")
@@ -260,10 +285,14 @@ class UniversalDobotGUI:
             messagebox.showerror("Errore", f"Eccezione durante la connessione: {e}")
 
     def disconnect_robot(self):
-        # Ferma il nastro prima di staccare la connessione per sicurezza
+        """
+        Interrompe in modo sicuro la comunicazione con l'hardware.
+        Arresta i motori del nastro trasportatore prima dello stacco per ragioni di sicurezza safety.
+        """
         self.stop_conveyor()
         
         try: 
+            # api.disconnect_dobot(port_name): Chiude il socket seriale associato alla porta specificata
             self.get_api().disconnect_dobot(port_name=self.port)
         except: 
             pass
@@ -271,26 +300,34 @@ class UniversalDobotGUI:
         self.is_connected = False
         self.port = None
         
-        # Sblocca la modifica del tipo di dispositivo e riabilita i controlli
+        # Riabilita i controlli di selezione hardware sulla GUI
         self.radio_magician.config(state="normal")
         self.radio_lite.config(state="normal")
         self.port_combo.config(state="readonly")
         
-        # Ripristina il bottone nello stato iniziale
+        # Ripristina l'aspetto iniziale del bottone di connessione
         self.btn_toggle_connect.config(text="CONNETTI ROBOT", style="Accent.TButton")
         self.lbl_status_msg.config(text="Stato: Disconnesso")
         self.root.update_idletasks()
 
     def update_conveyor_speed(self, val):
-        """Invia il comando di controllo della velocità al nastro trasportatore."""
+        """
+        Invia il comando di controllo della velocità al nastro trasportatore.
+        
+        Parametri della funzione set_converyor:
+        - port_name: Stringa identificativa della porta COM attiva.
+        - index: Identificativo del canale del motore passo-passo sulla scheda (di norma 0).
+        - enable: Booleano. True attiva l'alimentazione del motore del nastro, False lo spegne elettricamente.
+        - speed: Intero (da -10000 a +10000) che imposta i passi/impulsi al secondo, definendo direzione e velocità.
+        - is_queued: Impostato obbligatoriamente a True. Inserisce il comando nella coda sequenziale del robot.
+        """
         if not self.is_connected: return
         speed_val = int(val)
         
-        # Se la velocità è 0, disabilitiamo il nastro, altrimenti lo teniamo abilitato
+        # Ottimizzazione: Se la velocità è 0 disabilitiamo il nastro (enable=False) per preservare i motori
         enable_conveyor = True if speed_val != 0 else False
         
         try:
-            # index di norma è 0 (o 1 a seconda dell'interfaccia usata sull'hardware)
             self.get_api().set_converyor(
                 port_name=self.port,
                 index=0,
@@ -302,12 +339,23 @@ class UniversalDobotGUI:
             print(f"Errore controllo nastro: {e}")
 
     def stop_conveyor(self):
-        """Azzera la velocità del nastro e aggiorna la GUI."""
+        """Azzera istantaneamente la velocità del nastro e ne aggiorna il componente grafico Slider."""
         self.conveyor_slider.set(0)
         if self.is_connected:
             self.update_conveyor_speed(0)
 
     def update_speed(self, val=None):
+        """
+        Configura la percentuale di dinamica (velocità ed accelerazione) del braccio robotico.
+        
+        Funzioni utilizzate:
+        - set_jogcommon_params: Configura il rapporto massimo per i movimenti manuali JOG (tasti a schermo).
+        - set_ptpcommon_params: Configura il rapporto per i movimenti automatici punto-punto (PTP).
+        
+        Parametri:
+        - velocity_ratio: Valore intero da 1 a 100 che scala la velocità massima del firmware.
+        - acceleration_ratio: Valore intero da 1 a 100 che scala l'accelerazione dei motori.
+        """
         if self.is_connected:
             speed_val = int(self.speed_slider.get())
             try:
@@ -316,6 +364,7 @@ class UniversalDobotGUI:
             except: pass
 
     def update_rail_speed(self, val=None):
+        """Aggiorna i parametri PTP punto-punto dedicati alle cinematiche di traslazione della rotaia."""
         if self.is_connected:
             speed_val = int(self.rail_speed_slider.get())
             try:
@@ -323,53 +372,48 @@ class UniversalDobotGUI:
             except: pass
 
     def start_jog(self, cmd_id):
+        """
+        Invia l'istruzione di avvio del movimento continuo su un asse (JOG).
+        
+        Parametri di set_jogcmd:
+        - port_name: Porta COM attiva.
+        - is_joint: Scelta del sistema di coordinate. False = Coordinate Cartesiane (X, Y, Z, R). True = Giunti del braccio.
+        - cmd: ID numerico della direzione (definito nelle costanti in cima al file, es. JOG_X_PLUS).
+        - is_queued: Impostato a False per l'esecuzione immediata in tempo reale (bypassando la coda dei movimenti pregressi).
+        """
         if self.is_connected:
             try: self.get_api().set_jogcmd(port_name=self.port, is_joint=False, cmd=cmd_id, is_queued=False)
             except: pass
 
     def stop_jog(self):
+        """Invia l'istruzione speciale JOG_IDLE (0) per arrestare immediatamente qualsiasi movimento JOG in corso."""
         if self.is_connected:
             try: self.get_api().set_jogcmd(port_name=self.port, is_joint=False, cmd=JOG_IDLE, is_queued=False)
             except: pass
 
     def run_robot_home(self):
+        """
+        Esegue la calibrazione hardware di Homing (azzeramento dei sensori fisici e dei giunti del braccio).
+        
+        Passaggi e funzioni:
+        1. api.clear_allalarms_state(port): Resetta tutti i registri di errore e allarme del firmware (fondamentale 
+           se il braccio ha urtato o superato i limiti cartesiani limite, bloccando l'accettazione di nuovi comandi).
+        2. api.set_homecmd(port_name): Invia l'ordine nativo al firmware di muovere sequenzialmente ciascun asse 
+           fino a intercettare i microinterruttori fisici di finecorsa per ricostruire lo zero macchina assoluto.
+        """
         if not self.is_connected: return
-        if messagebox.askyesno("Homing", "Avviare la calibrazione Home fisica del braccio robotico?\n(Il robot eseguirà movimenti di reset hardware)"):
+        if messagebox.askyesno("Homing", "Avviare la calibrazione Home fisica del braccio robotico?"):
             try:
                 api = self.get_api()
-                
-                # 1. Pulizia drastica di tutti gli allarmi attivi
                 api.clear_allalarms_state(self.port)
-                self.root.update_idletasks()
                 
-                # 2. Configurazione dei parametri di Homing (Velocità ed accelerazione di homing)
-                # Spesso necessario se la libreria perde i riferimenti dopo una disconnessione
-                try:
-                    api.set_homeparams(port_name=self.port, x=200, y=0, z=0, r=0, is_queued=False)
-                except Exception as e_param:
-                    print(f"Nota: Configurazione homeparams non supportata o fallita: {e_param}")
-
-                # 3. Gestione asse Rotaia (L) durante l'Homing
-                # Se la rotaia è attiva, forziamo l'Homing generico. Altrimenti, usiamo il comando standard.
-                self.lbl_status_msg.config(text="Esecuzione Homing in corso...")
-                self.root.update_idletasks()
-                
-                # Proviamo a invocare il comando Home. Alcuni firmware richiedono is_queued=False esplicito.
-                try:
-                    api.set_homecmd(port_name=self.port, is_queued=False)
-                except TypeError:
-                    # Se la versione della libreria installata non accetta keyword arguments o is_queued
-                    try:
-                        api.set_homecmd(self.port)
-                    except Exception as e_inner:
-                        raise e_inner
-                        
-                messagebox.showinfo("Homing Avviato", "Il processo di Homing è iniziato. Attendi che il robot finisca di muoversi e il LED di stato torni ad essere verdeS.")
-                
+                # Comando originale nativo della libreria per l'esecuzione dell'Homing del braccio
+                api.set_homecmd(port_name=self.port)
             except Exception as e:
-                messagebox.showerror("Errore Homing", f"Impossibile completare la calibrazione Home:\n{e}")
+                messagebox.showerror("Errore", f"Impossibile completare la calibrazione: {e}")
 
     def home_rail(self):
+        """Forza il riposizionamento lineare della rotaia portandola alla coordinata base L = 0.0 mm."""
         if not self.is_connected: return
         self.rail_slider.set(0) 
         self.move_rail_to_target(0.0) 
@@ -387,6 +431,24 @@ class UniversalDobotGUI:
         self.root.after(500, self._stop_rail_interaction)
 
     def move_rail_to_target(self, target_l):
+        """
+        Esegue il movimento interpolato del robot modificando esclusivamente l'asse aggiuntivo della rotaia (L).
+        
+        Logica e funzioni:
+        1. api.set_device_withl(port, True): Comunica esplicitamente alla logica del Dobot che è presente e 
+           attivo l'asse di scorrimento extra (Linear Rail).
+        2. api.get_pose(port): Recupera la posizione attuale del robot, in modo da mantenere invariate le coordinate 
+           cartesiane correnti (X, Y, Z, R) del braccio durante la traslazione sulla base lineare.
+        3. Scansione dinamica del comando PTP: A seconda della versione del firmware/libreria installata sul sistema,
+           il comando per lo spostamento accoppiato alla rotaia può chiamarsi 'set_ptplcmd' o 'set_ptpwithlcmd'. 
+           Il ciclo for analizza i metodi disponibili (tramite dir(api)) ed esegue quello presente.
+           
+        Parametri del comando PTP con Rotaia:
+        - ptp_mode: Impostato a 1 (Movimento di tipo MOVL - Movimento lineare nello spazio cartesiano).
+        - x, y, z, r: Coordinate spaziali attuali del braccio (prese da get_pose) per non fargli compiere movimenti asincroni.
+        - l: Nuova coordinata millimetrica (target_l) in cui posizionare la base del robot lungo la rotaia.
+        - is_queued: Impostato a False per elaborare il movimento istantaneamente.
+        """
         self.update_rail_speed()
         try:
             api = self.get_api()
@@ -429,28 +491,51 @@ class UniversalDobotGUI:
         self.user_interacting_with_rail = False
 
     def suction_on(self):
+        """
+        Attiva la pompa per la generazione del vuoto nella ventosa (Suction Cup) dell'end-effector.
+        
+        Parametri di set_endeffector_suctioncup:
+        - port_name: Porta COM attiva.
+        - enable: Abilitazione generale del modulo attuatore di fine braccio (True = Alimentato / Attivo).
+        - on: Stato pneumatico della valvola (True = Avvia l'aspirazione generando il vuoto per afferrare l'oggetto).
+        - is_queued: Impostato a False per agire istantaneamente senza attendere la coda dei movimenti.
+        """
         if self.is_connected:
             try: self.get_api().set_endeffector_suctioncup(port_name=self.port, enable=True, on=True, is_queued=False)
             except: pass
 
     def suction_off(self):
+        """
+        Avvia la procedura di rilascio dell'oggetto dalla ventosa.
+        Inverte momentaneamente il flusso (on=False) per rilasciare la presa pneumatica velocemente.
+        """
         if self.is_connected:
             try:
                 self.get_api().set_endeffector_suctioncup(port_name=self.port, enable=True, on=False, is_queued=False)
+                # Un timer asincrono di 250ms spegne del tutto il compressore per non lasciarlo sotto sforzo inutilmente
                 self.root.after(250, self._turn_off_compressor)
             except: pass
 
     def _turn_off_compressor(self):
+        """Disabilita completamente l'alimentazione elettrica all'attuatore della ventosa (enable=False)."""
         if self.is_connected:
             try: self.get_api().set_endeffector_suctioncup(port_name=self.port, enable=False, on=False, is_queued=False)
             except: pass
 
     def read_pose_loop(self):
+        """
+        Ciclo asincrono di polling temporizzato (ogni 200 ms) che interroga il robot.
+        
+        Funzioni utilizzate:
+        - api.get_pose(port_name): Invia una richiesta al firmware che risponde con un dizionario contenente le 
+          coordinate cartesiane reali correnti espresse in millimetri ('x', 'y', 'z', 'l') e gradi sessagesimali ('r').
+        """
         if self.is_connected:
             try:
                 pose = self.get_api().get_pose(port_name=self.port)
                 if pose:
                     real_l = pose.get('l', 0.0)
+                    # Aggiornamento grafico delle etichette testuali (Label) formattando il testo a due cifre decimali
                     self.lbl_x.config(text=f"X: {pose.get('x', 0.0):.2f}")
                     self.lbl_y.config(text=f"Y: {pose.get('y', 0.0):.2f}")
                     self.lbl_z.config(text=f"Z: {pose.get('z', 0.0):.2f}")
@@ -459,6 +544,7 @@ class UniversalDobotGUI:
             except Exception:
                 pass
             
+            # scheduler asincrono di Tkinter: riesegue ricorsivamente questo metodo tra 200 millisecondi
             self.root.after(200, self.read_pose_loop)
 
 if __name__ == "__main__":
