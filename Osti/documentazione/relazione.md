@@ -60,15 +60,9 @@ Verso la conclusione del corso, abbiamo organizzato tutto il lavoro svolto crean
 ### Giorno 11: Stesura della relazione finale
 Nell'ultima giornata ci siamo riuniti per raccogliere i dati, ordinare gli appunti di laboratorio e redigere questa relazione conclusiva per riassumere i risultati ottenuti.
 
-## 3. CONCLUSIONI
-Il corso si è rivelato altamente formativo. Partendo da zero e affrontando difficoltà via via crescenti, il nostro gruppo è riuscito a comprendere non solo le basi della programmazione in Python applicata alla robotica, ma anche l'importanza del problem solving davanti a problemi reali (come i driver non aggiornati, i limiti fisici delle porte hardware o i bug nelle librerie).
-
-La collaborazione all'interno del gruppo ha permesso di dividere i compiti in modo efficiente, portando alla creazione di un sistema di smistamento automatizzato funzionante e di un'interfaccia di controllo flessibile e documentata.
-
-Ringraziamo i docenti per il supporto fornito durante lo svolgimento delle attività.
 
 
-## NOTE ED ERRORI RISCONTRATI DURANTE IL PERCORSO
+## 3. NOTE ED ERRORI RISCONTRATI DURANTE IL PERCORSO
 
 Questa sezione raccoglie i problemi pratici emersi durante lo sviluppo e le relative soluzioni operative.
 
@@ -204,7 +198,12 @@ Per facilitare la manutenzione del progetto, e consigliabile organizzare i file 
 
 Una struttura ordinata rende più semplice per i futuri studenti capire dove intervenire e quale file usare come punto di partenza.
 
+## 4. CONCLUSIONI
+Il corso si è rivelato altamente formativo. Partendo da zero e affrontando difficoltà via via crescenti, il nostro gruppo è riuscito a comprendere non solo le basi della programmazione in Python applicata alla robotica, ma anche l'importanza del problem solving davanti a problemi reali (come i driver non aggiornati, i limiti fisici delle porte hardware o i bug nelle librerie).
 
+La collaborazione all'interno del gruppo ha permesso di dividere i compiti in modo efficiente, portando alla creazione di un sistema di smistamento automatizzato funzionante e di un'interfaccia di controllo flessibile e documentata.
+
+Ringraziamo i docenti per il supporto fornito durante lo svolgimento delle attività.
 
 
 
