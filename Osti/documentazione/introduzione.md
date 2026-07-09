@@ -1,20 +1,18 @@
-Documentazione Dobot Magician
+# Documentazione Dobot Magician
 
-Obiettivo del progetto
+### Obiettivo del progetto
 
 Questo progetto nasce con l'obiettivo di fornire una guida pratica e tecnica per la programmazione del Dobot Magician tramite Visual Studio Code, come alternativa all'ambiente proprietario DobotLab.
 
-L'intento non e soltanto mostrare come avviare il robot, ma soprattutto spiegare come sviluppare programmi più avanzati, comprendendo il flusso completo di comunicazione tra software e hardware, la gestione delle coordinate, l'uso delle periferiche collegate e l'integrazione di sensori e telecamera. La documentazione e pensata come un manuale operativo per gli studenti che, in futuro, dovranno continuare o ampliare il lavoro senza dipendere esclusivamente da DobotLab.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-Requisiti e prerequisiti
+## Requisiti e prerequisiti
 
 Per utilizzare correttamente il Dobot Magician in questo progetto sono necessari sia componenti hardware sia competenze software.
 
 
 
-Requisiti hardware
+### Requisiti hardware
 
 Per replicare le prove e i programmi sviluppati servono:
 
@@ -31,19 +29,19 @@ Per replicare le prove e i programmi sviluppati servono:
 
 
 
-Requisiti software
+### Requisiti software
 
 A livello software servono:
 
 * Visual Studio Code;
-* Python correttamente installato;
+* Python correttamente installato (versione 3.10 per usare DobotEDU dato che le versioni successive non sono compatibili);
 * librerie Python necessarie per comunicare con il robot e con gli eventuali moduli aggiuntivi;
 * DobotLink in esecuzione in background, se richiesto dalla comunicazione tra VSCode e Dobot Magician;
 * eventuali driver USB/seriali corretti, a seconda del chip di comunicazione montato sul dispositivo.
 
 
 
-Prerequisiti tecnici
+### Prerequisiti tecnici
 
 Prima di iniziare e consigliato avere familiarità con:
 
@@ -56,11 +54,11 @@ Prima di iniziare e consigliato avere familiarità con:
 * uso di librerie esterne in Python;
 * funzionamento generale del Dobot Magician e delle sue modalità operative.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 
-Architettura di funzionamento: come VSCode comunica con il robot
+
+## Architettura di funzionamento: come VSCode comunica con il robot
 
 Per comprendere i programmi sviluppati e fondamentale capire come avviene la comunicazione tra il computer e il Dobot Magician.
 
