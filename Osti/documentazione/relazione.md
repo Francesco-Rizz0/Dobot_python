@@ -13,7 +13,8 @@ L’obiettivo principale del nostro gruppo è stato quello di programmare un bra
 
 ## 2. DIARIO DELLE ATTIVITÀ GIORNALIERE
 ### Giorno 1: Configurazione dell'ambiente di sviluppo
-La prima giornata è stata dedicata alla configurazione iniziale del sistema. Abbiamo studiato come interfacciare il Dobot Magician utilizzando l'editor VSCode, preferendolo all'IDE proprietario DobotLab per avere un controllo più approfondito sul codice. Abbiamo quindi cercato e installato le librerie Python idonee alla gestione del robot e individuato la corretta porta di comunicazione seriale del computer (identificata come COM3 o COM4) necessaria per stabilire il collegamento.
+La prima giornata è stata dedicata alla configurazione iniziale del sistema. Abbiamo studiato come interfacciare il Dobot Magician utilizzando l'editor VSCode, preferendolo all'IDE proprietario DobotLab per avere un controllo più approfondito sul codice. Abbiamo quindi cercato e installato le librerie Python idonee alla gestione del robot (la principale è DobotEDU) e individuato la corretta porta di comunicazione seriale del computer (identificata come COM3 o COM4) necessaria per stabilire il collegamento.
+Abbiamo inoltre scoperto che il le versioni sucessive di python alla 3.10 non sono compatibili con la libreria DobotEDU. Perciò abbiamo disinstallato python e scaricato la verisione 3.10.
 
 ### Giorno 2: Risoluzione dei problemi hardware e gestione dei driver
 Durante il secondo giorno abbiamo riscontrato alcuni problemi che impedivano il corretto funzionamento del robot. Per risolverli, abbiamo proceduto all'aggiornamento dei driver del dispositivo. Questa operazione ci ha permesso di approfondire la conoscenza dell'hardware, scoprendo che esistono due versioni differenti del driver a seconda del chip montato sul robot: il Silicon Labs CP210x e il CH340 / CH341 (WCH).
