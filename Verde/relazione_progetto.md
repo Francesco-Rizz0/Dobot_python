@@ -35,6 +35,8 @@ L'interazione con il robot avviene interamente da tastiera secondo lo schema seg
 | <kbd>+</kbd> / <kbd>-</kbd> | Incrementa / decrementa velocità di spostamento |
 | <kbd>H</kbd> | Ritorno alla posizione di home |
 | <kbd>R</kbd> | Avvia / arresta registrazione movimenti |
+| <kbd>F</kbd> | Registra e stampa a schermo le coordinate del punto in cui si trova il robot |
+| <kbd>Backspace</kbd> | Elimina l'ultima riga registrata |
 | <kbd>ESC</kbd> | Chiusura del programma e disconnessione |
 
 ## 4. Implementazione della funzione di registrazione (macro recorder)
