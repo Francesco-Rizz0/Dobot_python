@@ -424,19 +424,19 @@ Per evitare conflitti tra librerie di progetti diversi, e consigliabile creare u
 
 Attivazione su Windows:
 
-(bash): .venv\\Scripts\\activate
+*(bash): .venv\\Scripts\\activate*
 
 
 
 Attivazione su Linux o macOS:
 
-(bash): source .venv/bin/activate
+*(bash): source .venv/bin/activate*
 
 
 
 #### Passo 3: aggiornare pip
 
-(bash): python -m pip install --upgrade pip
+*(bash): python -m pip install --upgrade pip*
 
 
 
@@ -444,11 +444,11 @@ Attivazione su Linux o macOS:
 
 Esempi comuni:
 
-(bash):
+*(bash):
 
 * pip install pyserial
 * pip install opencv-python
-* pip install numpy
+* pip install numpy*
 
 
 
@@ -460,13 +460,13 @@ Se il progetto usa una libreria specifica per Dobot, questa va installata second
 
 Per rendere il progetto replicabile, e utile esportare le dipendenze installate:
 
-(bash): pip freeze > requirements.txt
+*(bash): pip freeze > requirements.txt*
 
 
 
 In questo modo un altro utente potrà installarle con:
 
-(bash): pip install -r requirements.txt
+*(bash): pip install -r requirements.txt*
 
 
 
