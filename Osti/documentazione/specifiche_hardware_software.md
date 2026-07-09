@@ -49,21 +49,27 @@ La spia luminosa presente sul corpo del Dobot Magician fornisce indicazioni imme
 
 
 Colore spia  |  Significato
+
 \-------------------------------------------------------------------------------------------
 
 Rosso        |  Errore o stato di allarme
+
 \-------------------------------------------------------------------------------------------
 
 Verde	       |  Robot connesso e pronto all'uso
+
 \-------------------------------------------------------------------------------------------
 
 Blu           |  Tentativo di connessione
+
 \-------------------------------------------------------------------------------------------
 
 Giallo        |  Avvio del sistema
+
 \-------------------------------------------------------------------------------------------
 
 Arancione      |  Anomalia di comunicazione, errore nelle coordinate o braccio fuori limite
+
 \-------------------------------------------------------------------------------------------
 
 La spia va sempre interpretata insieme al comportamento del robot. Ad esempio, una luce rossa fissa può indicare un allarme che impedisce il funzionamento corretto di alcuni componenti, anche se il programma risulta sintatticamente corretto.
