@@ -173,53 +173,64 @@ Indice delle funzioni Python per Dobot Magician
 
 Movimento del braccio
 
-* connessione al robot;
-* inizializzazione;
-* movimento verso coordinate assolute;
-* movimento relativo;
-* ritorno alla home;
-* gestione della velocita e dell'accelerazione.
+* connessione al robot -> *device = pydobot.Dobot(port='COM3')*;
+* inizializzazione -> *device.pose()*;
+* movimento verso coordinate assolute -> *device.move_to(x, y, z, r, wait=True)*;
+* movimento relativo -> *device.move_to(x + dx, y + dy, z + dz, r + dr, wait=True)*;
+* gestione della velocita e dell'accelerazione -> *device.speed(velocity, acceleration)*.
 
 
 
 End-effector
 
-* attivazione/disattivazione ventosa;
-* apertura/chiusura pinza;
-* gestione penna o altri utensili.
+* attivazione/disattivazione ventosa -> *device.suck(True) # Attiva l'aspirazione e device.suck(False) # Disattiva l'aspirazione *;
+* apertura/chiusura pinza -> *device.grip(True) # Chiude la pinza e device.grip(False) # Apre la pinza*;
+* gestione penna o altri utensili -> *device.move_to(x, y, z_contatto, r, wait=True)  # Penna giù e device.move_to(x, y, z_sollevato, r, wait=True) # Penna su*.
 
 
 
 Rotaia / nastro trasportatore
 
-* avvio;
-* arresto;
-* impostazione della velocita;
-* cambio direzione, se previsto.
+* avvio -> *device.conveyor_belt(speed=100) # Avvia il nastro a una determinata velocità*;
+* arresto -> *device.conveyor_belt(speed=0)   # Ferma il nastro impostando la velocità a zero*;
+* impostazione della velocita -> *device.conveyor_belt(speed=150) # Valore positivo per aumentare la velocità*;
+* cambio direzione, se previsto -> *device.conveyor_belt(speed=-100) # Il segno meno inverte la direzione di marcia*.
 
 
 
 Sensori
 
-* lettura sensore infrarossi;
-* logiche di attesa basate sul rilevamento oggetti.
+* lettura sensore infrarossi -> *stato_sensore = device.get_infrared_sensor(port=2) # Ritorna 1 se c'è un oggetto, 0 se è vuoto*;
+* logiche di attesa basate sul rilevamento oggetti -> *while device.get_infrared_sensor(port=2) == 0:
+    time.sleep(0.1) # Attende l'arrivo dell'oggetto (es. sul nastro)*.
 
 
 
 Telecamera e visione
 
-* acquisizione immagine;
-* estrazione del colore;
-* classificazione del cubetto.
+* acquisizione immagine -> *cap = cv2.VideoCapture(0) # 0 indica la telecamera predefinita
+ret, frame = cap.read()   # 'frame' contiene la matrice di pixel dell'immagine*;
+* estrazione del colore -> *hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+maschera = cv2.inRange(hsv, lower_red, upper_red) # Isola i pixel rossi*;
+* classificazione del cubetto -> *pixel_colore = cv2.countNonZero(maschera)
+if pixel_colore > 500: # Soglia empirica
+    colore_rilevato = "Rosso"*.
 
 
 
 Gestione errori e stato del robot
 
-* reset;
-* clear alarm;
-* verifica della connessione;
-* riconoscimento degli stati anomali.
+* reset -> *device.close()
+device = pydobot.Dobot(port='COM3')*;
+* clear alarm -> *device.clear_alarms()*;
+* verifica della connessione -> *try:
+    device.pose()
+    connesso = True
+except Exception:
+    connesso = False*;
+* riconoscimento degli stati anomali -> *allarmi_attivi = device.get_alarms()
+if len(allarmi_attivi) > 0:
+    print(f"Anomalia rilevata! Codici errore: {allarmi_attivi}")*.
 
 
 
