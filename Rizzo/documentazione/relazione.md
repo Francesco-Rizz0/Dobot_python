@@ -30,3 +30,7 @@ Il quarto obbiettivo è stato quello di implementare la rotaia che permette al M
 Per implementare i controlli della rotaia, abbiamo usato le funzioni `set_device_withl()` per inizializzare la rotaia, `set_ptplcmd()` o `set_ptplwithlcmd()` per muovere in contemporanea braccio e rotaia e `set_ptpcommon_params()` per impostare velocità e accelerazione.
 ### Problemi riscontrati
 * Calibrazione rotaia: quando il programma si avvia e il Magician con la rotaia si trova in un punto diverso da l=0, dove l è il valore della distanza del Magican dall'inizio della rotaia, quel punto diventerà lo "zero" della distanza, quindi il valore l virtuale sarà 0 nononstante il valore l reale sia maggiore. La rotaia in questi casi non può muoversi indietro rispetto a quel punto, perché l non può assumere valori negativi. Per risolvere questom problema, basta riportare alla Home il Magician con il comando `set_homecmd()` o tenendo premuto il pulsante Key per qualche secondo e rilasciandolo.
+## 5. Creazione programma controllo robot e periferiche
+L'ultimo obbiettivo è stato quello di creare un programma che ci permettesse di controllare il Magician, il Magician Lite e le varie periferiche tramite una GUI.
+### Implementazione
+Per implementare la GUI abbiamo usato la libreria ktinker. Tramite pulsanti e slider, con il programma è possible controllare la posizione del braccio, la poszione della rotaia, la velocità del nastro traposrtatore e di riportare alla Home i vari modelli Dobot.
