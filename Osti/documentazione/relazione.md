@@ -1,5 +1,9 @@
 RELAZIONE FINALE DEL CORSO DI INFORMATICA E ROBOTICA
+
+
 Oggetto: Programmazione e automazione del braccio robotico Dobot Magician in ambiente Python via VSCode
+
+
 Coinvolgimento: Opero in collaborazione
 
 1. INTRODUZIONE
