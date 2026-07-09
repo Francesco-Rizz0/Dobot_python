@@ -6,6 +6,7 @@ Il codice e la documentazione del workspace sono organizzati come segue:
   * `production.py`: Isola robotica autonoma di smistamento ad anello chiuso con visione artificiale.
 * **`BETAS/`**: Raccoglie gli script intermedi, i prototipi parzialmente funzionanti e i test di sviluppo privi delle ottimizzazioni di concorrenza e sicurezza hardware.
 * **`dobot.zip`**: File di configurazione, librerie di basso livello ed esempi caricati nell'ambiente di sviluppo per istruire il sistema nell'utilizzo nativo delle API della libreria `DobotEDU`.
+* **`DOCUMENTATION.md`**: È la suite software completa in Python usata per connettere, comandare e automatizzare in totale sicurezza sia il modello Magician che la versione Lite.
 
 ---
 
@@ -71,8 +72,13 @@ Abbiamo aggiunto anche dei pulsanti HOME per riportare la rotaia ed il robot nel
 Siamo molto soddisfatti di come funziona il programma di smistamento automatico perché siamo riusciti a fare in modo che il robot crei delle pile perfette in base al colore dei cubetti. Ogni volta che posiziona un cubetto, il programma si ricorda quanti ne ha messi e al giro dopo aumenta l'altezza di rilascio di circa 24,5 millimetri (l'altezza esatta del cubetto). In questo modo il robot non sbatte mai contro i pezzi già posizionati e non rischia di romperli.
 Questo programma può ricordare il nostro progetto con dobot lite creato l'anno scorso in seconda superiore (2024/2025), dove creavamo 4 pile di cubetti più piccoli sempre in base al colore ma tramite una programmazione diversa (a blocchi) fornita direttamente da dobotLAB.
 
-### INTERFACCIA GRAFICA UNIVERSALE (Modulo `movement_gui.py`)
+### 2) INTERFACCIA GRAFICA UNIVERSALE (Modulo `movement_gui.py`)
 Il progetto è nato per creare un interfaccia stile "joystick" per il movimento del dobot magician, tuttavia lo abbiamo migliorato sempre di più implementando movimenti anche sull'asse Z (verticali) e la rotazione della ventosa.
 Successivamente abbiamo implementato delle funzioni per il movimento del nastro trasportatore, con una parte dedicata nella GUI, cosa che abbiamo ripetuto successivamente per l'implementazione della rotaia, parte che ha richiesto più tempo per ottenere un movimento fluido e senza errori di posizione (come l'arrivare alla fine della rotaia ma il robot continua a provare a proseguire).
 
+### IMPLEMENTAZIONI FUTURE
 Questi 2 programmi possono essere uniti e migliorati in futuro, per esempio, alla ricezione di un cubetto ed al riconoscimento del colore, il robot si sposta sulla rotaria per raggiungere un "are di stoccaggio" con diverse pile di cubetti, ed aggiungendo altri robot si può in modo da creare una sorta di linea di produzione ridotta.
+
+### ORGANIZZAZIONE DEL GRUPPO 
+Il mio lavoro è stato svolto in gruppo con Rizzo Franceso ed Osti Gioia, tutti facevamo lo stesso codice fondamentale ed ognuno aggiungeva delle miglioria o piccolezze che poi venivano implementate anche dagli altri membri del gruppo, scambiandoci idee e miglioria a cui gli altri non avevano ancora pensato.
+Per questo ogni membro aveva un programma leggermente diverso dagli altri ma con le stesse funzioni, ed alla completamento dei progetti, una volta che tutti i componenti del gruppo raggiungevano le piene funzionalità del proprio programma, veniva stabilito il "migliore" ovvero quello che avremmo tenuto come finale "ufficiale".
