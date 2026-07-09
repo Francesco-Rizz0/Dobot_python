@@ -1,92 +1,98 @@
 # Documentazione tecnica di sistema
 Specifiche delle API, struttura del codice e guida di configurazione per Dobot Magician Lite
 
+
+
 ## 1. Requisiti di sistema e installazione
-Per il corretto funzionamento del software di controllo, l'ambiente di runtime deve rispettare i seguenti vincoli di versione:
+L'ambiente operativo richiede la corretta esecuzione in background dell'applicazione **DobotLink** per consentire l'instradamento dei comandi verso la porta seriale.
 
-* **Runtime:** Python 3.8.x (Versioni superiori non garantiscono il caricamento del modulo `DobotEDU`).
-* **Pacchetti richiesti:** Installare le dipendenze tramite `pip`:
+* **Ambiente Python:** Versione 3.8.x.
+* **Installazione delle dipendenze:**
   ```bash
-  pip install pydobot pynput
+  pip install keyboard pyperclip
+  ```
 
-```
-
-
-
-## 2. Struttura del codice sorgente
-
-Il software si basa su un'architettura ad eventi asincroni per l'ascolto della tastiera unito a chiamate sincrone verso la porta seriale del robot.
-
-### Modulo di inizializzazione
-
-```python
-import time
-from pydobot import Dobot
-from pynput import keyboard
-
-# Inizializzazione del braccio robotico (specificare la porta corretta, es. COM3 o /dev/ttyUSB0)
-device = Dobot(port='COM3', verbose=False)
-
-# Variabili di stato globali
-current_speed = 50
-is_recording = False
-macro_commands = []
-
-```
+*(Nota: il modulo `DobotEDU` deve essere importato dall'ambiente software fornito dal produttore).*
 
 
 
-## 3. Specifiche delle funzioni e logica di controllo
+## 2. Architettura del codice sorgente
 
-### `muovi_robot(delta_x, delta_y, delta_z, delta_r)`
+Il programma implementa un ciclo di controllo continuo (polling a $10\text{ ms}$ tramite `time.sleep(0.01)`) che verifica lo stato dei tasti e aziona i metodi della libreria `m_lite`.
 
-Calcola lo spostamento relativo aggiungendo i valori delta alla posizione cartesiana corrente letta in tempo reale dal robot. Invia il comando di tipo `LINEAR_MOVE`.
+### Gestione della connessione e configurazione iniziale
 
-### Gestione del modulo macro recorder
-
-Se l'ascoltatore di eventi rileva la pressione del tasto `r`, lo stato della variabile `is_recording` viene invertito. Quando è attivo, ogni volta che viene inviato un comando al robot, la stringa corrispondente all'API viene aggiunta alla lista `macro_commands`.
-
-### Callback di cattura input
+All'avvio, il software tenta di stabilire la connessione sulla porta `COM4` impostando la velocità massima degli assi al 100% e la velocità di partenza al 51%:
 
 ```python
-def on_press(key):
-    global current_speed, is_recording, macro_commands
-    try:
-        if key.char == 'w':
-            muovi_robot(10, 0, 0, 0)
-        elif key.char == 'e':
-            device.suck(True)
-            if is_recording:
-                macro_commands.append("robot.suck(True)")
-        elif key.char == 'r':
-            if not is_recording:
-                is_recording = True
-                macro_commands = []
-            else:
-                is_recording = False
-                stampa_codice_generato()
-    except AttributeError:
-        if key == keyboard.Key.space:
-            muovi_robot(0, 0, 10, 0)
+PORTA = 'COM4'
+
+try:
+    m_lite.set_armspeed_ratio(PORTA, set_type=1, set_value=100)
+except Exception as e:
+    print(f"\n[ERRORE DI CONNESSIONE]: {e}")
+    sys.exit()
+    
+m_lite.set_armspeed_ratio(PORTA, set_type=0, set_value=51)
 
 ```
 
 
 
-## 4. Formato del blocco di codice autogenerato
+## 3. Specifiche delle funzioni core
 
-Il codice stampato in console o salvato in file al termine della registrazione rispetta la sintassi standard della libreria `pydobot`:
+### `muovi(coordinata, tasto)`
+
+Questa funzione ottimizza il movimento manuale (JOG). Quando un tasto di direzione viene premuto, viene inviato il comando di movimento sulla coordinata corrispondente. Il ciclo `while` blocca l'esecuzione mantenendo il robot in movimento finché il tasto resta premuto; al rilascio, viene inviato il comando di arresto (`cmd=0`).
 
 ```python
-#  codice macro generato automaticamente 
-from pydobot import Dobot
-robot = Dobot(port='COM3')
-
-robot.move_to(210.0, 0.0, 50.0, 0.0, wait=True)
-robot.suck(True)
-robot.move_to(210.0, 20.0, 60.0, 10.0, wait=True)
-robot.suck(False)
-robot.go_home()
-#  fine macro 
+def muovi(coordinata, tasto):
+    m_lite.set_jogcmd(PORTA, is_joint=0, cmd=coordinata)
+    while keyboard.is_pressed(tasto):
+        time.sleep(0.01)
+    m_lite.set_jogcmd(PORTA, is_joint=0, cmd=0)
 
 ```
+
+### `stampaCodice(strCodice)`
+
+Gestisce la finalizzazione della macro. Riceve la stringa contenente le istruzioni accumulate, la mostra a terminale e ne esegue l'esportazione negli appunti di sistema.
+
+```python
+def stampaCodice(strCodice):
+   print("Codice:\n\n"+strCodice+"\nIl codice è stato copiato negli appunti!\n")
+   pyperclip.copy(strCodice)
+
+```
+
+
+
+## 4. Analisi delle funzioni di stato e manipolazione stringhe
+
+### Acquisizione e formattazione coordinate PTP
+
+Alla pressione del tasto F, il dizionario restituito da `m_lite.get_pose(PORTA)` viene analizzato per estrarre le chiavi geometriche. Se la variabile `registrazione` è attiva, viene concatenata una stringa di comando Point-To-Point (`ptp_mode=0`):
+
+```python
+coordinate = m_lite.get_pose(PORTA)
+if registrazione:
+    strCodice += "m_lite.set_ptpcmd(ptp_mode=0, x = " + str(coordinate["x"]) + ", y = " + str(coordinate["y"]) + ", z = " + str(coordinate["z"]) + ", r = " + str(coordinate["r"]) + ")\n"
+
+```
+
+### Gestione dello stack di comandi (Funzione cancella)
+
+L'eliminazione dell'ultima riga inserita sfrutta la scomposizione della stringa in una lista di righe tramite `splitlines()`, rimuovendo l'ultimo elemento e ricombinando il testo:
+
+```python
+righe = strCodice.splitlines()
+del righe[-1]
+strCodice = "\n".join(righe)
+
+```
+
+
+
+## 5. Routine di chiusura e sicurezza
+
+Alla pressione del tasto ESC, il ciclo principale si interrompe (istruzione `break`). Per garantire la sicurezza dell'hardware, il software esegue automaticamente la disattivazione del sistema di aspirazione della ventosa e invia il braccio robotico alla posizione di riposo (`set_homecmd`) prima di terminare il processo.
