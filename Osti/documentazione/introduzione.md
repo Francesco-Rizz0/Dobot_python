@@ -8,23 +8,6 @@ L'intento non e soltanto mostrare come avviare il robot, ma soprattutto spiegare
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-
-
-Pubblico di riferimento
-
-La documentazione e rivolta principalmente a:
-
-* studenti che dovranno programmare il Dobot Magician nelle esercitazioni o nei progetti futuri;
-* utenti con una conoscenza base o intermedia di Python;
-* chi ha già utilizzato DobotLab a livello introduttivo, ma necessita di passare a una programmazione più flessibile e dettagliata tramite VSCode;
-* chi deve comprendere non solo il comportamento del braccio robotico, ma anche l'interazione con ventosa, pinza, penna, nastro trasportatore, sensori e telecamera.
-
-Non si tratta quindi di una guida elementare all'accensione del robot, ma di un riferimento tecnico per imparare a costruire programmi reali e modulari.
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-
-
 Requisiti e prerequisiti
 
 Per utilizzare correttamente il Dobot Magician in questo progetto sono necessari sia componenti hardware sia competenze software.
