@@ -12,10 +12,6 @@ Il motivo principale e che le librerie usate nei due ambienti non coincidono. An
 
 
 
-Di conseguenza, quando si passa da DobotLab a VSCode, e normalmente necessario riscrivere il codice, ridefinendo comandi, flussi e interazioni secondo la libreria effettivamente supportata nell'ambiente Python usato in Visual Studio Code.
-
-
-
 Perché non basta copiare il codice
 
 DobotLab e un ambiente integrato sviluppato per lavorare con una propria struttura interna e con una propria implementazione delle API. VSCode, invece, e solo un editor: per far funzionare il robot bisogna installare e configurare manualmente i pacchetti Python necessari.
