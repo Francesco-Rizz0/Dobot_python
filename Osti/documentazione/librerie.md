@@ -1,4 +1,4 @@
-Librerie da installare in VSCode e differenze rispetto a DobotLab
+## Librerie da installare in VSCode e differenze rispetto a DobotLab
 
 Uno degli aspetti più importanti da chiarire e che il codice scritto in DobotLab non può essere trasferito automaticamente in VSCode, e viceversa, in modo diretto e semplice.
 
@@ -12,7 +12,7 @@ Il motivo principale e che le librerie usate nei due ambienti non coincidono. An
 
 
 
-Perché non basta copiare il codice
+### Perché non basta copiare il codice
 
 DobotLab è un ambiente integrato sviluppato per lavorare con una propria struttura interna e con una propria implementazione delle API. VSCode, invece, e solo un editor: per far funzionare il robot bisogna installare e configurare manualmente i pacchetti Python necessari.
 
@@ -20,27 +20,27 @@ Anche se il comportamento desiderato del robot rimane lo stesso, il codice cambi
 
 
 
-Librerie da installare
+## Librerie da installare
 
 La lista precisa delle librerie dipende dal vostro repository e dalla modalità scelta per pilotare il robot, ma in un progetto di questo tipo di solito occorre distinguere almeno quattro categorie.
 
 
 
-1\. Librerie per la comunicazione con il Dobot
+### 1\. Librerie per la comunicazione con il Dobot
 
 Queste librerie servono a inviare comandi al robot, gestire connessione, stato e movimenti. In base alla soluzione adottata nel progetto, potrebbe essere presente una libreria specifica per il Dobot Magician oppure un wrapper Python dedicato.
 
 
 
-2\. Librerie per la comunicazione seriale
+### 2\. Librerie per la comunicazione seriale
 
-Una libreria come pyserial e spesso necessaria per gestire la comunicazione tramite porta seriale tra PC e robot o tra PC e moduli intermedi.
+Una libreria come *pyserial* e spesso necessaria per gestire la comunicazione tramite porta seriale tra PC e robot o tra PC e moduli intermedi.
 
 
 
-3\. Librerie per la visione artificiale
+### 3\. Librerie per la visione artificiale
 
-Per la telecamera e l'analisi dei colori e normalmente utile una libreria come OpenCV, che consente:
+Per la telecamera e l'analisi dei colori e normalmente utile una libreria come *OpenCV*, che consente:
 
 * acquisizione dei frame;
 * conversione tra spazi colore;
@@ -50,24 +50,24 @@ Per la telecamera e l'analisi dei colori e normalmente utile una libreria come O
 
 
 
-4\. Librerie di supporto
+### 4\. Librerie di supporto
 
 A seconda del progetto possono servire anche librerie per:
 
-* calcoli numerici;
-* gestione GUI;
-* manipolazione di array o immagini;
-* sincronizzazione temporale e gestione di eventi.
+* calcoli numerici -> *math* (già installata) e *numpy* (aggiuntive: *scipy* e *cmath*;
+* gestione GUI -> *tkinter*;
+* manipolazione di array o immagini -> *numpy*, *opencv-python* (importata come cv2);
+* sincronizzazione temporale e gestione di eventi -> *time* (es: *time.sleep()*), *threading*.
 
 
 
-Come installare le librerie dal terminale di VSCode
+### Come installare le librerie dal terminale di VSCode
 
 Nel manuale e opportuno spiegare la procedura in modo operativo.
 
 
 
-Passo 1: verificare Python
+#### Passo 1: verificare Python
 
 Nel terminale di VSCode, controllare che Python sia installato correttamente:
 
@@ -81,7 +81,7 @@ oppure, in alcuni sistemi:
 
 
 
-Passo 2: creare un ambiente virtuale
+#### Passo 2: creare un ambiente virtuale
 
 Per evitare conflitti tra librerie di progetti diversi, e consigliabile creare un ambiente virtuale:
 
@@ -101,13 +101,13 @@ Attivazione su Linux o macOS:
 
 
 
-Passo 3: aggiornare pip
+#### Passo 3: aggiornare pip
 
 (bash): python -m pip install --upgrade pip
 
 
 
-Passo 4: installare i pacchetti necessari
+#### Passo 4: installare i pacchetti necessari
 
 Esempi comuni:
 
@@ -123,7 +123,7 @@ Se il progetto usa una libreria specifica per Dobot, questa va installata second
 
 
 
-Passo 5: salvare le dipendenze
+#### Passo 5: salvare le dipendenze
 
 Per rendere il progetto replicabile, e utile esportare le dipendenze installate:
 
