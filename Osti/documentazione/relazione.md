@@ -29,15 +29,15 @@ Il quarto giorno abbiamo finalizzato l'implementazione del nastro e del sensore 
 Giorno 5: Sviluppo del ciclo completo di smistamento e timeout di sicurezza
 Abbiamo creato un programma coordinato per gestire l'intero flusso di lavoro:
 
-I cubetti avanzano sul nastro trasportatore.
+- I cubetti avanzano sul nastro trasportatore.
 
-Il nastro si ferma quando il sensore IR rileva il cubetto.
+- Il nastro si ferma quando il sensore IR rileva il cubetto.
 
-Il robot si attiva, preleva il cubetto e lo posiziona davanti alla telecamera.
+- Il robot si attiva, preleva il cubetto e lo posiziona davanti alla telecamera.
 
-Il sistema OpenCV riconosce il colore e il robot sposta il cubetto nella rispettiva pila (divisa per colore).
+- Il sistema OpenCV riconosce il colore e il robot sposta il cubetto nella rispettiva pila (divisa per colore).
 
-Se il colore non viene identificato, il cubetto viene depositato in una pila degli scarti.
+- Se il colore non viene identificato, il cubetto viene depositato in una pila degli scarti.
 
 Per evitare che il programma rimanesse attivo all'infinito a fine ciclo, abbiamo implementato un controllo di timeout: se per più di 10 secondi non vengono rilevati cubetti davanti al sensore, il codice si arresta automaticamente.
 
