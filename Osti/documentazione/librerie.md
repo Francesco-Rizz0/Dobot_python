@@ -14,7 +14,7 @@ Il motivo principale e che le librerie usate nei due ambienti non coincidono. An
 
 Perché non basta copiare il codice
 
-DobotLab e un ambiente integrato sviluppato per lavorare con una propria struttura interna e con una propria implementazione delle API. VSCode, invece, e solo un editor: per far funzionare il robot bisogna installare e configurare manualmente i pacchetti Python necessari.
+DobotLab è un ambiente integrato sviluppato per lavorare con una propria struttura interna e con una propria implementazione delle API. VSCode, invece, e solo un editor: per far funzionare il robot bisogna installare e configurare manualmente i pacchetti Python necessari.
 
 Anche se il comportamento desiderato del robot rimane lo stesso, il codice cambia perché cambia il livello di astrazione con cui i comandi vengono espressi.
 
