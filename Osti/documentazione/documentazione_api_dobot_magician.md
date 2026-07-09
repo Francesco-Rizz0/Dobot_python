@@ -566,11 +566,11 @@ Attivazione su Linux o macOS:
 
 Esempi comuni:
 
-*(bash):
+*(bash):*
 
-* pip install pyserial
-* pip install opencv-python
-* pip install numpy*
+* *pip install pyserial*
+* *pip install opencv-python*
+* *pip install numpy*
 
 
 
