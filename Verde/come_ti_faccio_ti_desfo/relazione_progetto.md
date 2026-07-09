@@ -33,8 +33,7 @@ Il programma adotta un approccio procedurale guidato dall'input dell'operatore, 
 1. **Configurazione iniziale:** Inizializzazione della porta seriale `COM4` e calibrazione della velocità assi al 100%.
 2. **Interfaccia di scelta:** L'utente seleziona tramite terminale la traccia musicale di sottofondo e l'effetto sonoro finale da riprodurre.
 3. **Routine di pallettizzazione ciclica:** Un sistema di tre cicli nidificati calcola dinamicamente le coordinate geometriche per prelevare gli oggetti disposti in griglia e depositarli in una struttura a pila, modificando progressivamente le coordinate $X, Y, Z$.
-4. **Routine di movimentazione avanzata ("Bombarda"):** Al termine della pallettizzazione, il robot esegue una traiettoria complessa a velocità ridotta (10%), simulando un percorso aereo predefinito sincronizzato con specifici segnali acustici.
-5. **Fase finale:** Riposizionamento del robot nelle coordinate di sicurezza e riproduzione dell'effetto sonoro di conclusione.
+4. **Fase finale:** Riposizionamento del robot nelle coordinate di sicurezza, arresto della musica di sottofondo e riproduzione dell'effetto sonoro di conclusione selezionato.
 
 
 
@@ -46,7 +45,7 @@ Il programma adotta un approccio procedurale guidato dall'input dell'operatore, 
 | **Coordinata X** | $253\text{ mm}$ | $+20\text{ mm}$ per ciclo esterno | Avanzamento fila di prelievo |
 | **Coordinata Y** | $151\text{ mm}$ / $-88\text{ mm}$ | $-20\text{ mm}$ per ciclo interno | Spostamento laterale di prelievo |
 | **Coordinata Z** | $-44\text{ mm}$ | $+10\text{ mm}$ per deposito | Incremento altezza della pila |
-| **Velocità standard** | $100\%$ | Ridotta a $10\%$ in traiettoria speciale | Sicurezza e fluidità di movimento |
+| **Velocità standard** | $100\%$ | Costante | Esecuzione rapida dei cicli di lavoro |
 
 
 
